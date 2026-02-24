@@ -49,7 +49,7 @@ We try to avoid:
 If you spot an inaccuracy or think we missed an important event, let us know:
 
 - **Email:** governance@example.com
-- **GitHub Issues:** [AI Governance Updates Issues](https://github.com/yourname/ai-governance-updates/issues)
+- **GitHub Issues:** [AI Governance Updates Issues](https://github.com/starcheeks/ai-governance-updates/issues)
 
 We appreciate corrections and suggestions for events to cover.
 
@@ -83,7 +83,7 @@ The full source code is available on GitHub. You can fork it, submit issues, or 
 ## Contact
 
 - **Questions:** governance@example.com
-- **GitHub:** [AI Governance Updates](https://github.com/yourname/ai-governance-updates)
+- **GitHub:** [AI Governance Updates](https://github.com/starcheeks/ai-governance-updates)
 - **Twitter:** [@AIGovUpdate](https://twitter.com/aigoverupdate) (if active)
 
 ---
