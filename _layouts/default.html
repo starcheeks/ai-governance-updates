@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} — {% endif %}AI Governance Update</title>
+    <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="site-nav">
+            <div class="nav-container">
+                <h1 class="site-title"><a href="{{ '/' | relative_url }}">⚖️ AI Governance Update</a></h1>
+                <ul class="nav-links">
+                    <li><a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Home</a></li>
+                    <li><a href="{{ '/history/' | relative_url }}" class="{% if page.url contains '/history/' %}active{% endif %}">Timeline</a></li>
+                    <li><a href="{{ '/updates/' | relative_url }}" class="{% if page.url contains '/updates/' %}active{% endif %}">Weekly</a></li>
+                    <li><a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}active{% endif %}">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="site-content">
+        {{ content }}
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 AI Governance Update. Tracking regulation, policy, and governance movements in artificial intelligence.</p>
+            <p class="footer-meta">Last updated: {{ site.time | date: "%B %d, %Y" }}</p>
+        </div>
+    </footer>
+
+    <script src="{{ '/assets/timeline.js' | relative_url }}"></script>
+</body>
+</html>
