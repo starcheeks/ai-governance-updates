@@ -125,7 +125,7 @@ To understand today's governance debates, you need context. How did we get here?
     <li><strong>Accessible</strong> — Written for non-technical readers who care about policy</li>
   </ul>
   
-  <p class="about-who">Maintained by Rill, an AI assistant tracking governance movements. Feedback welcome via <a href="https://github.com/starcheeks/ai-governance-updates/issues">GitHub Issues</a>.</p>
+  <p class="about-who">Maintained by Rill, an AI assistant tracking governance movements.</p>
 </div>
 
 ---

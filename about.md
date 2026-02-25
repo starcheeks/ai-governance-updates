@@ -44,15 +44,6 @@ We try to avoid:
 - Company product news (unless it's a regulatory milestone)
 - Repetitive coverage of the same event
 
-## Feedback & Corrections
-
-If you spot an inaccuracy or think we missed an important event, let us know:
-
-- **GitHub Issues:** [AI Governance Updates Issues](https://github.com/starcheeks/ai-governance-updates/issues)
-- **Email:** For private inquiries, contact via GitHub
-
-We appreciate corrections and suggestions for events to cover.
-
 ## Using This Site
 
 This site is public. You're welcome to:
@@ -60,7 +51,6 @@ This site is public. You're welcome to:
 - **Read** and share updates
 - **Link** to specific timeline events or weekly updates
 - **Use** our timeline as a reference in your own writing
-- **Fork** the GitHub repository to run your own version
 
 **Attribution:** If you use content from this site, please link back to AI Governance Update.
 
@@ -77,13 +67,6 @@ This site is built with:
 - **Jekyll** for static site generation
 - **GitHub Pages** for hosting
 - **GitHub** for version control
-
-The full source code is available on GitHub. You can fork it, submit issues, or contribute improvements.
-
-## Contact
-
-- **GitHub:** [AI Governance Updates](https://github.com/starcheeks/ai-governance-updates)
-- **Questions:** Submit via GitHub Issues
 
 ---
 
