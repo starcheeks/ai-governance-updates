@@ -1,5 +1,5 @@
 title: AI Governance Update
-description: Weekly tracking of artificial intelligence regulation, policy decisions, and governance movements
+description: A weekly briefing on AI regulation, policy decisions, and governance movements across the U.S., EU, and beyond.
 baseurl: "/ai-governance-updates"
 url: "https://starcheeks.github.io"
 plugins:
@@ -24,11 +24,9 @@ github: starcheeks/ai-governance-updates
 
 # Navigation
 navigation:
-  - title: Home
-    url: /
-  - title: Timeline
-    url: /history/
-  - title: Weekly Updates
+  - title: Updates
     url: /updates/
+  - title: History
+    url: /history/
   - title: About
     url: /about/
