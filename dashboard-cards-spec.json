@@ -1,0 +1,235 @@
+{
+  "cards": [
+    {
+      "id": "sentiment-dashboard",
+      "name": "AI Governance Sentiment",
+      "purpose": "Show overall regulatory environment mood and trend (tightening vs loosening)",
+      "gridSize": "30% left-column, spans 2 cards",
+      "layout": {
+        "type": "circular-gauge",
+        "centerMetric": "sentiment-score",
+        "visualization": "Speedometer-style gauge with needle",
+        "trend": "Monthly comparison arrow"
+      },
+      "colors": {
+        "critical": "#D32F2F",    // 0-25%: Red - Rapid tightening
+        "warning": "#F57C00",      // 25-50%: Orange - Tightening
+        "neutral": "#FBC02D",      // 50-70%: Yellow - Balanced
+        "favorable": "#388E3C",    // 70-85%: Green - Loosening
+        "excellent": "#1976D2"     // 85-100%: Blue - Permissive
+      },
+      "contentStructure": {
+        "headline": "AI GOVERNANCE SENTIMENT",
+        "subheading": "Overall regulatory environment",
+        "primaryMetric": "75% (Neutral-Favorable)",
+        "trend": "↑ Shifted 15% tighter this month",
+        "comparison": "vs +5% last month",
+        "ctas": ["View 7-day & 30-day", "View contributing events"]
+      },
+      "interactivity": {
+        "hover": "Tooltip showing contributing factors",
+        "click": "Expand to 90-day trend + key events",
+        "toggle": "7-day | 30-day | 90-day view switcher"
+      },
+      "mobileAdaptation": "Circular gauge → simple arrow badge with color. Trend visible on swipe.",
+      "accessibility": "Sentiment as text ('Favorable 75%') + color code for screen readers"
+    },
+    {
+      "id": "weekly-events",
+      "name": "This Week's Key Events",
+      "purpose": "Show critical governance events and news happening RIGHT NOW",
+      "gridSize": "30% right-column, top card",
+      "layout": {
+        "type": "stacked-list",
+        "itemsPerCategory": 1-3,
+        "categories": ["Critical", "Important", "Watch"]
+      },
+      "colors": {
+        "critical": "#D32F2F",    // Red icon + label
+        "important": "#F57C00",   // Orange icon + label
+        "watch": "#FBC02D"        // Yellow icon + label
+      },
+      "contentStructure": {
+        "headline": "THIS WEEK'S KEY EVENTS",
+        "items": [
+          {
+            "severity": "critical",
+            "icon": "🔴",
+            "title": "Event title (e.g., EU AI Act Draft Updated)",
+            "description": "Brief 1-line summary",
+            "date": "Due date or publishing date",
+            "cta": "Click for details"
+          }
+        ],
+        "footer": "[View all 8 events] link"
+      },
+      "interactivity": {
+        "itemClick": "Modal with full details + linked articles",
+        "filter": "By severity (Critical/Important/Watch)",
+        "filterByGeography": "EU / US / UK / Asia / Global"
+      },
+      "typography": {
+        "headline": "16px bold",
+        "itemTitle": "13px bold",
+        "description": "12px regular",
+        "date": "11px light gray, right-aligned"
+      },
+      "mobileAdaptation": "Stack vertically, collapse 'Watch' items by default, swipe to expand"
+    },
+    {
+      "id": "risk-meter",
+      "name": "Regulatory Risk Level",
+      "purpose": "Show which jurisdictions have high/medium/low regulatory risk this quarter",
+      "gridSize": "20% top-right corner",
+      "layout": {
+        "type": "horizontal-bar-chart",
+        "jurisdictions": ["EU", "UK", "US", "China"],
+        "metricRange": "0-100%"
+      },
+      "colors": {
+        "high": "#D32F2F",    // 70-100%: High risk
+        "medium": "#FBC02D",  // 40-70%: Medium risk
+        "low": "#388E3C"      // 0-40%: Low risk
+      },
+      "contentStructure": {
+        "headline": "REGULATORY RISK LEVEL",
+        "subheading": "(This Quarter)",
+        "items": [
+          {
+            "flag": "🇪🇺",
+            "jurisdiction": "EU",
+            "barWidth": "78%",
+            "label": "HIGH RISK (78%)",
+            "riskFactors": [
+              "AI Act enforcement phase",
+              "Frequent clarifications",
+              "Strict penalty structure"
+            ]
+          }
+        ]
+      },
+      "interactivity": {
+        "hover": "Tooltip with top 3 risk factors",
+        "click": "Navigate to jurisdiction deep-dive page",
+        "deepDive": "Shows regulatory status, recent changes, upcoming milestones"
+      },
+      "mobileAdaptation": "Stack vertically, full-width bars"
+    },
+    {
+      "id": "upcoming-deadlines",
+      "name": "Upcoming Deadlines & Decisions",
+      "purpose": "Show what's coming in next 30-90 days that requires action",
+      "gridSize": "25% bottom-right",
+      "layout": {
+        "type": "timeline-list",
+        "timeframe": "Next 90 days",
+        "grouping": "By date"
+      },
+      "colors": {
+        "urgent": "#D32F2F",    // <14 days: Red line
+        "soon": "#F57C00",      // 14-30 days: Orange line
+        "track": "#FBC02D",     // 30-60 days: Yellow line
+        "future": "#BDBDBD"     // 60-90 days: Gray line
+      },
+      "icons": {
+        "📅": "Deadline/comment period",
+        "📋": "Guidance/standards released",
+        "⚖️": "Legislative hearing/vote",
+        "📊": "Report/analysis published",
+        "🗣️": "Public feedback opportunity"
+      },
+      "contentStructure": {
+        "items": [
+          {
+            "date": "March 15",
+            "lineColor": "urgent",
+            "icon": "📅",
+            "title": "EU AI Act Compliance Comments Due",
+            "daysAway": "14 days away",
+            "ctas": ["Calendar export", "Set reminder"]
+          }
+        ]
+      },
+      "interactivity": {
+        "dateClick": "Expanded details + calendar export",
+        "setReminder": "Export to Outlook/Google Calendar with auto-reminder",
+        "views": "Calendar view | List view toggle"
+      },
+      "mobileAdaptation": "Vertical list, dates as left-edge accent line"
+    },
+    {
+      "id": "timeline-context",
+      "name": "Regulatory Timeline Context",
+      "purpose": "Show where we are in the regulatory lifecycle with past and future key milestones",
+      "gridSize": "25% bottom-left",
+      "layout": {
+        "type": "horizontal-timeline",
+        "timespan": "12 months past + 6 months future",
+        "currentPosition": "highlighted dot"
+      },
+      "colors": {
+        "past": "#BDBDBD",      // Gray for history
+        "current": "#D32F2F",   // Red dot for NOW
+        "future": "#1976D2"     // Blue for upcoming
+      },
+      "contentStructure": {
+        "headline": "REGULATORY TIMELINE",
+        "subheading": "(Past 12 months + next 6)",
+        "entries": [
+          {
+            "year": "2025",
+            "month": "January",
+            "event": "EU AI Act Passed",
+            "icon": "════"
+          },
+          {
+            "year": "2026",
+            "month": "TODAY",
+            "event": "We are here",
+            "icon": "●",
+            "highlight": true
+          }
+        ]
+      },
+      "interactivity": {
+        "hover": "Brief summary popup",
+        "click": "Link to detailed article",
+        "zoom": "Drag to zoom in/out (mobile-friendly swipe)"
+      },
+      "ctas": ["Expand timeline", "PDF export"],
+      "mobileAdaptation": "Vertical list with left-edge timeline bar"
+    }
+  ],
+  "gridLayout": {
+    "desktop": {
+      "width": "3 columns",
+      "height": "2 rows (top) + full-width (below)",
+      "order": [
+        ["sentiment", "events", "risk"],
+        ["timeline", "deadlines", null],
+        ["detailed-newsletter"]
+      ]
+    },
+    "tablet": {
+      "width": "2 columns",
+      "order": [
+        ["sentiment-full"],
+        ["events", "risk"],
+        ["timeline", "deadlines"],
+        ["detailed-newsletter"]
+      ]
+    },
+    "mobile": {
+      "width": "1 column",
+      "order": "sentiment, events, risk, timeline, deadlines, newsletter",
+      "spacing": "24px gaps between cards"
+    }
+  },
+  "cardStyling": {
+    "borderRadius": "8px",
+    "shadow": "0 2px 8px rgba(0,0,0,0.1)",
+    "padding": "24px",
+    "backgroundColor": "#FFFFFF",
+    "border": "1px solid #E0E0E0"
+  }
+}

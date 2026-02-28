@@ -1,0 +1,188 @@
+{
+  "colorPalette": {
+    "primary": {
+      "darkBlue": {
+        "hex": "#1976D2",
+        "usage": "Headers, primary CTAs, focus states, links",
+        "contrast": "AAA with white"
+      },
+      "lightBlue": {
+        "hex": "#E3F2FD",
+        "usage": "Card backgrounds, light emphasis, hover states",
+        "contrast": "AAA with dark text"
+      },
+      "navy": {
+        "hex": "#0D47A1",
+        "usage": "Deep emphasis, dark modes, strong hierarchy",
+        "contrast": "AAA with white"
+      }
+    },
+    "sentiment": {
+      "critical": {
+        "hex": "#D32F2F",
+        "rgb": "rgb(211, 47, 47)",
+        "usage": "Critical events, high risk, urgent alerts, sentiment 0-25%",
+        "semantics": "Regulatory tightening, strict enforcement, breaking changes"
+      },
+      "warning": {
+        "hex": "#F57C00",
+        "rgb": "rgb(245, 124, 0)",
+        "usage": "Important events, medium risk, upcoming actions, sentiment 25-50%",
+        "semantics": "Tightening trend, medium scrutiny, caution advised"
+      },
+      "neutral": {
+        "hex": "#FBC02D",
+        "rgb": "rgb(251, 192, 45)",
+        "usage": "Watch items, low-medium risk, informational, sentiment 50-70%",
+        "semantics": "Balanced signals, mixed trends, stay informed"
+      },
+      "positive": {
+        "hex": "#388E3C",
+        "rgb": "rgb(56, 142, 60)",
+        "usage": "Positive trends, favorable decisions, sentiment 70-85%",
+        "semantics": "Loosening regulations, encouraging environment"
+      },
+      "excellent": {
+        "hex": "#1976D2",
+        "rgb": "rgb(25, 118, 210)",
+        "usage": "Highly favorable environment, permissive policy, sentiment 85-100%",
+        "semantics": "Investment-friendly, minimal compliance burden"
+      }
+    },
+    "text": {
+      "dark": {
+        "hex": "#212121",
+        "usage": "Headlines (h1, h2, h3), primary body text, high emphasis",
+        "contrast": "AAA with all backgrounds"
+      },
+      "body": {
+        "hex": "#424242",
+        "usage": "Body text, regular content, readable at 12px+",
+        "contrast": "AAA with white/light backgrounds"
+      },
+      "light": {
+        "hex": "#757575",
+        "usage": "Secondary text, dates, metadata, less important info",
+        "contrast": "AA with white backgrounds"
+      },
+      "disabled": {
+        "hex": "#BDBDBD",
+        "usage": "Inactive buttons, disabled states, placeholder text",
+        "contrast": "AA minimum"
+      }
+    },
+    "neutral": {
+      "white": {
+        "hex": "#FFFFFF",
+        "usage": "Card backgrounds, content areas, primary background"
+      },
+      "lightGray": {
+        "hex": "#F5F5F5",
+        "usage": "Section backgrounds, subtle differentiation"
+      },
+      "mediumGray": {
+        "hex": "#E0E0E0",
+        "usage": "Borders, dividers, subtle separators"
+      },
+      "darkGray": {
+        "hex": "#9E9E9E",
+        "usage": "Inactive elements, secondary actions"
+      }
+    }
+  },
+  "typography": {
+    "fontStack": {
+      "primary": "\"Inter\", \"Open Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
+      "rationale": "Inter is designed for screen readability. Open Sans is universally available fallback. System fonts ensure fast rendering.",
+      "weights": {
+        "regular": 400,
+        "medium": 500,
+        "semibold": 600,
+        "bold": 700
+      }
+    },
+    "scale": {
+      "h1": {
+        "fontSize": "32px",
+        "lineHeight": "1.3",
+        "letterSpacing": "-0.5px",
+        "fontWeight": 700,
+        "usage": "Page title, main heading",
+        "example": "AI GOVERNANCE NEWSLETTER"
+      },
+      "h2": {
+        "fontSize": "24px",
+        "lineHeight": "1.3",
+        "letterSpacing": "-0.25px",
+        "fontWeight": 700,
+        "usage": "Card headers, section titles",
+        "example": "THIS WEEK'S KEY EVENTS"
+      },
+      "h3": {
+        "fontSize": "18px",
+        "lineHeight": "1.4",
+        "letterSpacing": "0px",
+        "fontWeight": 600,
+        "usage": "Subheaders, event titles",
+        "example": "EU AI Act Draft Updated"
+      },
+      "bodyLarge": {
+        "fontSize": "16px",
+        "lineHeight": "1.5",
+        "letterSpacing": "0px",
+        "fontWeight": 400,
+        "usage": "Lead paragraphs, important body text"
+      },
+      "body": {
+        "fontSize": "14px",
+        "lineHeight": "1.5",
+        "letterSpacing": "0.15px",
+        "fontWeight": 400,
+        "usage": "Primary body text, event descriptions",
+        "example": "New disclosure requirements for AI systems..."
+      },
+      "bodySmall": {
+        "fontSize": "13px",
+        "lineHeight": "1.5",
+        "letterSpacing": "0.15px",
+        "fontWeight": 500,
+        "usage": "Event summaries, callout text, labels"
+      },
+      "caption": {
+        "fontSize": "12px",
+        "lineHeight": "1.4",
+        "letterSpacing": "0.4px",
+        "fontWeight": 400,
+        "usage": "Supporting text, metadata, dates"
+      },
+      "captionSmall": {
+        "fontSize": "11px",
+        "lineHeight": "1.4",
+        "letterSpacing": "0.5px",
+        "fontWeight": 500,
+        "usage": "Timestamps, secondary labels, fine print",
+        "example": "14 days away | Updated: March 2"
+      }
+    },
+    "lineHeight": {
+      "tight": "1.3",
+      "usage": "Headlines, short text",
+      "rationale": "Reduces space, increases visual impact"
+    },
+    "lineHeight": {
+      "normal": "1.5",
+      "usage": "Body text, readable paragraphs",
+      "rationale": "Standard readability, comfortable for extended reading"
+    },
+    "lineHeight": {
+      "loose": "1.8",
+      "usage": "Card descriptions, complex text",
+      "rationale": "Increases cognitive comfort for busy practitioners"
+    }
+  },
+  "rationale": {
+    "colorChoices": "Color-coding is critical for compliance practitioners who scan quickly. Red = stop/urgent, Orange = caution, Yellow = neutral, Green = positive. This follows global traffic light conventions.",
+    "typographyChoices": "Bold headlines = easy scanning while speed-reading. Generous spacing = reduces cognitive load. Sans-serif = professional, trustworthy tone. Font sizes support hierarchy: bigger = more important.",
+    "accessibilityApproach": "WCAG 2.1 AA compliance. All colors have text labels (never color-alone). Sufficient contrast ratios. Large touch targets for mobile (44px minimum)."
+  }
+}

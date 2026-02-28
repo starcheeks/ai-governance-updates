@@ -1,0 +1,14 @@
+{
+  "name": "ai-governance-newsletter-dashboard",
+  "version": "1.0.0",
+  "description": "Interactive dashboard for AI governance compliance newsletter",
+  "main": "index.js",
+  "scripts": {
+    "dev": "http-server public -p 8080 -c-1",
+    "build": "echo 'Dashboard ready at public/index.html'"
+  },
+  "keywords": ["governance", "compliance", "dashboard", "newsletter"],
+  "author": "Rill",
+  "license": "MIT",
+  "devDependencies": {}
+}
