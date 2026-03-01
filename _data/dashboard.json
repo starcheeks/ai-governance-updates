@@ -1,27 +1,27 @@
 {
-  "lastUpdated": "2026-02-28",
+  "lastUpdated": "2026-03-01",
   "sentiment": [
-    { "days": 7, "score": 38, "label": "Cautious", "trend": "Shifted 15% tighter this week", "detail": "EU AI Act enforcement + US state bills" },
-    { "days": 30, "score": 45, "label": "Mixed", "trend": "Shifted 12% tighter this month", "detail": "EU enforcement balanced by UK pro-innovation signals" },
-    { "days": 90, "score": 52, "label": "Balanced", "trend": "Slight tightening over 90 days", "detail": "Global divergence: EU tightening, Asia stabilizing" }
+    { "days": 7, "score": 38, "label": "Cautious", "trend": "Shifted tighter this week", "detail": "EU prohibited-practices enforcement active, US state bills advancing" },
+    { "days": 30, "score": 45, "label": "Mixed", "trend": "Shifted tighter this month", "detail": "EU enforcement balanced by US federal deregulation signals" },
+    { "days": 90, "score": 52, "label": "Balanced", "trend": "Slight tightening over 90 days", "detail": "Global divergence: EU tightening, US deregulating, Asia stabilizing" }
   ],
   "risks": [
-    { "jurisdiction": "EU", "flag": "EU", "score": 78, "level": "high", "factors": "AI Act enforcement, GDPR, high-risk system registration" },
-    { "jurisdiction": "China", "flag": "CN", "score": 72, "level": "high", "factors": "Algorithm registration, data localization, government approval" },
-    { "jurisdiction": "UK", "flag": "GB", "score": 55, "level": "medium", "factors": "ICO guidance, sector-specific rules, Brexit divergence" },
-    { "jurisdiction": "US", "flag": "US", "score": 42, "level": "medium", "factors": "State patchwork, federal procurement rules, FTC enforcement" }
+    { "jurisdiction": "EU", "flag": "EU", "score": 78, "level": "high", "factors": "AI Act prohibited practices in effect, high-risk obligations Aug 2026, penalties up to 7% turnover" },
+    { "jurisdiction": "China", "flag": "CN", "score": 72, "level": "high", "factors": "Generative AI regulations, algorithm registration, content alignment requirements" },
+    { "jurisdiction": "UK", "flag": "GB", "score": 55, "level": "medium", "factors": "ICO guidance, sector-specific rules via existing regulators, pro-innovation approach" },
+    { "jurisdiction": "US", "flag": "US", "score": 42, "level": "medium", "factors": "State patchwork (CO, NY, MA), federal deregulation under EO 14179, FTC enforcement" }
   ],
   "events": [
-    { "title": "EU AI Act Enforcement Begins", "summary": "First wave of compliance requirements now active for high-risk AI systems.", "severity": "critical", "jurisdiction": "EU", "date": "2026-02-24" },
-    { "title": "Colorado AI Transparency Bill", "summary": "HB 1299 would require bias testing and disclosure for high-impact AI systems.", "severity": "important", "jurisdiction": "US", "date": "2026-02-20" },
-    { "title": "UK ICO AI Guidance Update", "summary": "Updated guidance on algorithmic decision-making under UK GDPR.", "severity": "watch", "jurisdiction": "UK", "date": "2026-02-22" },
-    { "title": "China Approves New AI Funding", "summary": "Government accelerates domestic AI development with new research funding.", "severity": "important", "jurisdiction": "China", "date": "2026-02-19" },
-    { "title": "Massachusetts AI Safety Hearing", "summary": "Legislature reviewing safety certification requirements for large generative AI models.", "severity": "important", "jurisdiction": "US", "date": "2026-02-21" }
+    { "title": "EU AI Act Prohibited Practices Now Enforceable", "summary": "Article 5 provisions banning social scoring, untargeted facial recognition scraping, and emotion inference in workplaces/schools have been enforceable since Feb 2, 2025.", "severity": "critical", "jurisdiction": "EU", "date": "2025-02-02" },
+    { "title": "Colorado SB 24-205 Implementation Approaches", "summary": "First comprehensive state AI bias law (signed May 2024) nears its June 30, 2026 implementation deadline after delay by SB 25B-004.", "severity": "important", "jurisdiction": "US", "date": "2026-02-20" },
+    { "title": "Trump Administration Signals State Preemption", "summary": "December 2025 executive order created DOJ AI Litigation Task Force to challenge state AI laws in federal court.", "severity": "critical", "jurisdiction": "US", "date": "2025-12-01" },
+    { "title": "New York RAISE Act Introduced", "summary": "NY Senate Bill S2632 proposes regulating frontier AI models, joining multiple AI employment bills in the state legislature.", "severity": "important", "jurisdiction": "US", "date": "2026-02-19" },
+    { "title": "Massachusetts AI Disclosure Act", "summary": "H.81 and related bills advancing in the legislature, addressing AI transparency in healthcare and consumer targeting.", "severity": "watch", "jurisdiction": "US", "date": "2026-02-21" }
   ],
   "deadlines": [
-    { "title": "EU AI Act High-Risk Compliance", "date": "2026-08-01", "jurisdiction": "EU", "description": "Full compliance required for high-risk AI systems" },
-    { "title": "Colorado HB 1299 Committee Vote", "date": "2026-03-15", "jurisdiction": "US", "description": "Expected committee vote on AI transparency bill" },
-    { "title": "Massachusetts Safety Hearing", "date": "2026-03-10", "jurisdiction": "US", "description": "Legislative hearing on AI safety testing mandate" },
-    { "title": "China Algorithm Registry Deadline", "date": "2026-06-30", "jurisdiction": "China", "description": "New AI models must register algorithms with CAC" }
+    { "title": "Colorado SB 24-205 Implementation", "date": "2026-06-30", "jurisdiction": "US", "description": "Consumer Protections for AI Act takes effect (delayed from Feb 2026 by SB 25B-004)" },
+    { "title": "EU AI Act High-Risk Obligations", "date": "2026-08-02", "jurisdiction": "EU", "description": "Full compliance required for high-risk AI systems under Annex III" },
+    { "title": "EU AI Act General-Purpose AI Obligations", "date": "2025-08-02", "jurisdiction": "EU", "description": "Obligations for general-purpose AI models took effect Aug 2, 2025" },
+    { "title": "EU AI Act Full Application", "date": "2027-08-02", "jurisdiction": "EU", "description": "Remaining AI Act provisions apply, including high-risk systems in Annex I" }
   ]
 }
