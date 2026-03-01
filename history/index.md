@@ -5,9 +5,10 @@ title: Timeline — A History of AI Governance
 
 <main class="site-content">
 
-# A History of AI Governance
-
-From algorithmic bias in hiring systems to the explosive growth of large language models, artificial intelligence has reshaped how governments, companies, and citizens think about regulation. This timeline traces the evolution of AI policy from the pre-generative AI era to today's fragmented regulatory landscape.
+<div class="page-header">
+  <h1>A History of AI Governance</h1>
+  <p>From algorithmic bias in hiring systems to the explosive growth of large language models, artificial intelligence has reshaped how governments, companies, and citizens think about regulation. This timeline traces the evolution of AI policy from the pre-generative AI era to today's fragmented regulatory landscape.</p>
+</div>
 
 <div class="timeline">
 
@@ -135,28 +136,31 @@ As of February 2026, AI governance is at a crossroads. <strong>In Europe:</stron
 
 </div>
 
-## Why This Matters
+<div class="content-section">
+  <h2>Why This Matters</h2>
+  <p>If you're building AI systems, regulatory clarity has become a business concern:</p>
+  <ol>
+    <li><strong>Know your audience.</strong> A model compliant with the EU AI Act might not work in China. A California-compliant system might not operate nationwide.</li>
+    <li><strong>Plan for compliance costs.</strong> Testing, documentation, and auditing are now expected.</li>
+    <li><strong>Watch the U.S. federal-state fight.</strong> The outcome will determine whether companies face a patchwork of rules or eventual unified clarity.</li>
+    <li><strong>Understand your liability.</strong> As regulation firms up, enforcement actions and lawsuits will follow.</li>
+    <li><strong>Engage with policy.</strong> The regulatory landscape is still forming. Industry input during rulemaking can shape outcomes.</li>
+  </ol>
+</div>
 
-If you're building AI systems, regulatory clarity has become a business concern:
+<div class="content-section">
+  <h2>Sources & Further Reading</h2>
+  <ul class="source-list">
+    <li><a href="https://gdpr-info.eu">GDPR — Official Text</a></li>
+    <li><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj">EU AI Act — Full Text</a></li>
+    <li><a href="https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-safe-secure-and-trustworthy-artificial-intelligence/">Biden Executive Order 14110</a></li>
+    <li><a href="https://www.whitehouse.gov/briefing-room/presidential-actions/2025/01/20/reducing-the-regulatory-burdens-of-artificial-intelligence/">Trump Executive Order 14131</a></li>
+    <li><a href="https://leginfo.legislature.ca.gov/">California SB 1047 — Analysis</a></li>
+    <li><a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf">NIST AI Risk Management Framework</a></li>
+    <li><a href="https://www.gov.uk/guidance/ai-assurance-techniques">UK AI Regulation Approach</a></li>
+  </ul>
+</div>
 
-1. **Know your audience.** A model compliant with the EU AI Act might not work in China. A California-compliant system might not operate nationwide.
-2. **Plan for compliance costs.** Testing, documentation, and auditing are now expected.
-3. **Watch the U.S. federal-state fight.** The outcome will determine whether companies face a patchwork of rules or eventual unified clarity.
-4. **Understand your liability.** As regulation firms up, enforcement actions and lawsuits will follow.
-5. **Engage with policy.** The regulatory landscape is still forming. Industry input during rulemaking can shape outcomes.
-
-## Sources & Further Reading
-
-- [GDPR — Official Text](https://gdpr-info.eu)
-- [EU AI Act — Full Text](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)
-- [Biden Executive Order 14110](https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-safe-secure-and-trustworthy-artificial-intelligence/)
-- [Trump Executive Order 14131](https://www.whitehouse.gov/briefing-room/presidential-actions/2025/01/20/reducing-the-regulatory-burdens-of-artificial-intelligence/)
-- [California SB 1047 — Analysis](https://leginfo.legislature.ca.gov/)
-- [NIST AI Risk Management Framework](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf)
-- [UK AI Regulation Approach](https://www.gov.uk/guidance/ai-assurance-techniques)
-
----
-
-*This timeline is maintained as a public reference. Last updated: February 2026.*
+<p class="page-updated">This timeline is maintained as a public reference. Last updated: February 2026.</p>
 
 </main>

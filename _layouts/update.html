@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<main class="site-content">
+  <article class="article-update">
+    <div class="article-header">
+      <a href="{{ '/updates/' | relative_url }}" class="article-back">&larr; All Updates</a>
+      <div class="article-meta">
+        <time class="article-date">{{ page.date | date: "%B %d, %Y" }}</time>
+        {% if page.impact %}<span class="impact-badge impact-{{ page.impact }}">{{ page.impact | capitalize }} Impact</span>{% endif %}
+      </div>
+      <h1 class="article-title">{{ page.title }}</h1>
+      {% if page.summary %}
+      <p class="article-summary">{{ page.summary }}</p>
+      {% endif %}
+      {% if page.tags %}
+      <div class="article-tags">
+        {% for tag in page.tags %}<span class="card-tag">{{ tag }}</span>{% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    <div class="article-body">
+      {{ content }}
+    </div>
+    <footer class="article-footer">
+      <a href="{{ '/updates/' | relative_url }}" class="article-back">&larr; Back to all updates</a>
+    </footer>
+  </article>
+</main>
