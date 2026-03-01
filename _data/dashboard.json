@@ -1,0 +1,29 @@
+{
+  "lastUpdated": "2026-02-28",
+  "sentiment": {
+    "periods": {
+      "7": { "score": 38, "label": "Cautious", "trend": "Shifted 15% tighter this week", "detail": "EU AI Act enforcement + US state bills" },
+      "30": { "score": 45, "label": "Mixed", "trend": "Shifted 12% tighter this month", "detail": "EU enforcement balanced by UK pro-innovation signals" },
+      "90": { "score": 52, "label": "Balanced", "trend": "Slight tightening over 90 days", "detail": "Global divergence: EU tightening, Asia stabilizing" }
+    }
+  },
+  "risks": [
+    { "jurisdiction": "EU", "flag": "\ud83c\uddea\ud83c\uddfa", "score": 78, "level": "high", "factors": "AI Act enforcement, GDPR, high-risk system registration" },
+    { "jurisdiction": "China", "flag": "\ud83c\udde8\ud83c\uddf3", "score": 72, "level": "high", "factors": "Algorithm registration, data localization, government approval" },
+    { "jurisdiction": "UK", "flag": "\ud83c\uddec\ud83c\udde7", "score": 55, "level": "medium", "factors": "ICO guidance, sector-specific rules, Brexit divergence" },
+    { "jurisdiction": "US", "flag": "\ud83c\uddfa\ud83c\uddf8", "score": 42, "level": "medium", "factors": "State patchwork, federal procurement rules, FTC enforcement" }
+  ],
+  "events": [
+    { "title": "EU AI Act Enforcement Begins", "summary": "First wave of compliance requirements now active for high-risk AI systems.", "severity": "critical", "jurisdiction": "EU", "date": "2026-02-24" },
+    { "title": "Colorado AI Transparency Bill", "summary": "HB 1299 would require bias testing and disclosure for high-impact AI systems.", "severity": "important", "jurisdiction": "US", "date": "2026-02-20" },
+    { "title": "UK ICO AI Guidance Update", "summary": "Updated guidance on algorithmic decision-making under UK GDPR.", "severity": "watch", "jurisdiction": "UK", "date": "2026-02-22" },
+    { "title": "China Approves New AI Funding", "summary": "Government accelerates domestic AI development with new research funding.", "severity": "important", "jurisdiction": "China", "date": "2026-02-19" },
+    { "title": "Massachusetts AI Safety Hearing", "summary": "Legislature reviewing safety certification requirements for large generative AI models.", "severity": "important", "jurisdiction": "US", "date": "2026-02-21" }
+  ],
+  "deadlines": [
+    { "title": "EU AI Act \u2014 High-Risk Compliance", "date": "2026-08-01", "jurisdiction": "EU", "description": "Full compliance required for high-risk AI systems" },
+    { "title": "Colorado HB 1299 Committee Vote", "date": "2026-03-15", "jurisdiction": "US", "description": "Expected committee vote on AI transparency bill" },
+    { "title": "Massachusetts Safety Hearing", "date": "2026-03-10", "jurisdiction": "US", "description": "Legislative hearing on AI safety testing mandate" },
+    { "title": "China Algorithm Registry Deadline", "date": "2026-06-30", "jurisdiction": "China", "description": "New AI models must register algorithms with CAC" }
+  ]
+}
