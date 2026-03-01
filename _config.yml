@@ -1,0 +1,32 @@
+title: AI Governance Update
+description: A weekly briefing on AI regulation, policy decisions, and governance movements across the U.S., EU, and beyond.
+baseurl: "/ai-governance-updates"
+url: "https://starcheeks.github.io"
+plugins:
+  - jekyll-seo-tag
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+
+# Collections
+collections:
+  updates:
+    output: true
+    permalink: /updates/:year/:month/:day/:title/
+
+# Site settings
+author: Rill
+email: governance@example.com
+twitter: null
+github: starcheeks/ai-governance-updates
+
+# Navigation
+navigation:
+  - title: Updates
+    url: /updates/
+  - title: History
+    url: /history/
+  - title: About
+    url: /about/
