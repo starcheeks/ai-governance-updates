@@ -24,6 +24,8 @@ github: starcheeks/ai-governance-updates
 
 # Navigation
 navigation:
+  - title: Dashboard
+    url: /dashboard/
   - title: Updates
     url: /updates/
   - title: History

@@ -31,9 +31,9 @@
             </button>
 
             <ul class="nav-links">
-                <li><a href="{{ '/updates/' | relative_url }}" class="{% if page.url contains '/updates/' %}active{% endif %}">Updates</a></li>
-                <li><a href="{{ '/history/' | relative_url }}" class="{% if page.url contains '/history/' %}active{% endif %}">History</a></li>
-                <li><a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}active{% endif %}">About</a></li>
+                {% for nav in site.navigation %}
+                <li><a href="{{ nav.url | relative_url }}" class="{% if page.url contains nav.url %}active{% endif %}">{{ nav.title }}</a></li>
+                {% endfor %}
                 <li><a href="https://github.com/starcheeks/ai-governance-updates" class="nav-subscribe">Subscribe</a></li>
             </ul>
         </div>
@@ -51,6 +51,7 @@
                 <div class="footer-heading">Navigate</div>
                 <ul class="footer-nav">
                     <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                    <li><a href="{{ '/dashboard/' | relative_url }}">Dashboard</a></li>
                     <li><a href="{{ '/updates/' | relative_url }}">Updates</a></li>
                     <li><a href="{{ '/history/' | relative_url }}">History</a></li>
                     <li><a href="{{ '/about/' | relative_url }}">About</a></li>
@@ -84,5 +85,6 @@
         });
     })();
     </script>
+    <script src="{{ '/js/dashboard.js' | relative_url }}"></script>
 </body>
 </html>
