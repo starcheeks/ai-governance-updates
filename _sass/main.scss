@@ -1,0 +1,1080 @@
+// AI Governance Newsletter - Main Stylesheet
+// Design System Implementation
+
+// ============================================
+// COLOR PALETTE
+// ============================================
+$primary-dark-blue: #1976D2;
+$primary-light-blue: #E3F2FD;
+$primary-navy: #0D47A1;
+
+// Sentiment colors
+$sentiment-red: #D32F2F;
+$sentiment-orange: #F57C00;
+$sentiment-yellow: #FBC02D;
+$sentiment-green: #388E3C;
+$sentiment-blue: #1976D2;
+
+// Text colors
+$text-dark: #212121;
+$text-body: #424242;
+$text-light: #757575;
+$text-disabled: #BDBDBD;
+
+// Neutral colors
+$neutral-white: #FFFFFF;
+$neutral-light-gray: #F5F5F5;
+$neutral-medium-gray: #E0E0E0;
+$neutral-dark-gray: #9E9E9E;
+
+// ============================================
+// TYPOGRAPHY
+// ============================================
+$font-stack: "Inter", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+$font-h1: 32px;
+$font-h2: 24px;
+$font-h3: 18px;
+$font-body: 14px;
+$font-small: 12px;
+$font-tiny: 11px;
+
+$font-regular: 400;
+$font-medium: 500;
+$font-bold: 700;
+
+$line-height-tight: 1.3;
+$line-height-normal: 1.5;
+$line-height-loose: 1.8;
+
+// ============================================
+// BREAKPOINTS
+// ============================================
+$mobile: 768px;
+$tablet: 1024px;
+$desktop: 1280px;
+
+// ============================================
+// MIXINS
+// ============================================
+@mixin mobile {
+  @media (max-width: #{$mobile - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$mobile}) and (max-width: #{$tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin card-shadow {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@mixin card-hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+// ============================================
+// BASE STYLES
+// ============================================
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  font-size: $font-body;
+  line-height: $line-height-normal;
+  color: $text-body;
+  background-color: $neutral-light-gray;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: $font-h1;
+  font-weight: $font-bold;
+  line-height: $line-height-tight;
+  color: $text-dark;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: $font-h2;
+  font-weight: $font-bold;
+  line-height: $line-height-tight;
+  color: $text-dark;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: $font-h3;
+  font-weight: $font-bold;
+  line-height: $line-height-tight;
+  color: $text-dark;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: $primary-dark-blue;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $primary-navy;
+    text-decoration: underline;
+  }
+}
+
+// ============================================
+// LAYOUT CONTAINER
+// ============================================
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @include desktop {
+    padding: 0 2rem;
+  }
+}
+
+// ============================================
+// HEADER
+// ============================================
+.site-header {
+  background: linear-gradient(135deg, $primary-navy 0%, $primary-dark-blue 100%);
+  color: $neutral-white;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+
+  .header-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  h1 {
+    color: $neutral-white;
+    margin-bottom: 0.5rem;
+    font-size: $font-h1;
+
+    @include mobile {
+      font-size: 24px;
+    }
+  }
+
+  .subtitle {
+    font-size: $font-body;
+    opacity: 0.9;
+    font-weight: $font-regular;
+  }
+
+  .last-updated {
+    font-size: $font-small;
+    opacity: 0.8;
+    margin-top: 0.5rem;
+  }
+}
+
+// ============================================
+// DASHBOARD GRID
+// ============================================
+.dashboard {
+  margin-bottom: 3rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+
+  // Mobile: 1 column
+  grid-template-columns: 1fr;
+
+  // Tablet: 2 columns
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  // Desktop: 3 columns, custom areas
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "sentiment key-events risk-meter"
+      "sentiment deadlines timeline";
+  }
+}
+
+// ============================================
+// DASHBOARD CARDS
+// ============================================
+.dashboard-card {
+  background: $neutral-white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  @include card-shadow;
+  transition: all 0.3s ease;
+
+  &:hover {
+    @include card-hover;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid $neutral-medium-gray;
+
+    h3 {
+      font-size: $font-h3;
+      margin: 0;
+      color: $text-dark;
+    }
+
+    .card-icon {
+      font-size: 24px;
+    }
+  }
+
+  .card-body {
+    margin-bottom: 1rem;
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid $neutral-medium-gray;
+
+    .card-cta {
+      font-size: $font-small;
+      color: $primary-dark-blue;
+      font-weight: $font-medium;
+      cursor: pointer;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $primary-navy;
+      }
+    }
+  }
+}
+
+// Card grid positioning (desktop only)
+@include desktop {
+  .card-sentiment {
+    grid-area: sentiment;
+  }
+
+  .card-key-events {
+    grid-area: key-events;
+  }
+
+  .card-risk-meter {
+    grid-area: risk-meter;
+  }
+
+  .card-deadlines {
+    grid-area: deadlines;
+  }
+
+  .card-timeline {
+    grid-area: timeline;
+  }
+}
+
+// ============================================
+// SENTIMENT CARD
+// ============================================
+.sentiment-gauge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+
+  .gauge-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 1.5rem;
+
+    @include mobile {
+      width: 160px;
+      height: 160px;
+    }
+  }
+
+  .gauge-svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+  }
+
+  .gauge-background {
+    fill: none;
+    stroke: $neutral-medium-gray;
+    stroke-width: 20;
+  }
+
+  .gauge-fill {
+    fill: none;
+    stroke-width: 20;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1s ease, stroke 0.3s ease;
+  }
+
+  .gauge-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    .sentiment-label {
+      font-size: 28px;
+      font-weight: $font-bold;
+      margin-bottom: 0.25rem;
+
+      @include mobile {
+        font-size: 22px;
+      }
+    }
+
+    .sentiment-value {
+      font-size: $font-small;
+      color: $text-light;
+    }
+  }
+
+  .sentiment-trend {
+    text-align: center;
+    font-size: $font-small;
+    color: $text-light;
+    line-height: $line-height-loose;
+    max-width: 300px;
+
+    .trend-arrow {
+      font-size: 16px;
+      margin-right: 0.25rem;
+    }
+  }
+
+  .sentiment-controls {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+
+    button {
+      padding: 0.5rem 1rem;
+      border: 1px solid $neutral-medium-gray;
+      background: $neutral-white;
+      color: $text-body;
+      border-radius: 4px;
+      font-size: $font-small;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: $primary-light-blue;
+        border-color: $primary-dark-blue;
+      }
+
+      &.active {
+        background: $primary-dark-blue;
+        color: $neutral-white;
+        border-color: $primary-dark-blue;
+      }
+    }
+  }
+}
+
+// Sentiment color classes
+.sentiment-red {
+  color: $sentiment-red;
+}
+
+.sentiment-orange {
+  color: $sentiment-orange;
+}
+
+.sentiment-yellow {
+  color: $sentiment-yellow;
+}
+
+.sentiment-green {
+  color: $sentiment-green;
+}
+
+.sentiment-blue {
+  color: $sentiment-blue;
+}
+
+// ============================================
+// KEY EVENTS CARD
+// ============================================
+.key-events-list {
+  .event-category {
+    margin-bottom: 1.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+      font-weight: $font-bold;
+      font-size: $font-body;
+
+      .severity-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-size: $font-tiny;
+        font-weight: $font-bold;
+
+        &.critical {
+          background: lighten($sentiment-red, 40%);
+          color: $sentiment-red;
+        }
+
+        &.important {
+          background: lighten($sentiment-orange, 40%);
+          color: darken($sentiment-orange, 10%);
+        }
+
+        &.watch {
+          background: lighten($sentiment-yellow, 40%);
+          color: darken($sentiment-yellow, 20%);
+        }
+      }
+    }
+
+    .event-item {
+      padding: 0.75rem;
+      margin-bottom: 0.5rem;
+      border-left: 3px solid;
+      background: $neutral-light-gray;
+      border-radius: 0 4px 4px 0;
+      transition: background 0.2s ease;
+      cursor: pointer;
+
+      &:hover {
+        background: darken($neutral-light-gray, 3%);
+      }
+
+      &.critical {
+        border-left-color: $sentiment-red;
+      }
+
+      &.important {
+        border-left-color: $sentiment-orange;
+      }
+
+      &.watch {
+        border-left-color: $sentiment-yellow;
+      }
+
+      .event-title {
+        font-weight: $font-medium;
+        font-size: $font-body;
+        margin-bottom: 0.25rem;
+        color: $text-dark;
+      }
+
+      .event-meta {
+        font-size: $font-small;
+        color: $text-light;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+
+        .event-date,
+        .event-jurisdiction {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.25rem;
+        }
+      }
+    }
+  }
+
+  .view-all {
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid $neutral-medium-gray;
+
+    a {
+      font-weight: $font-medium;
+      font-size: $font-small;
+    }
+  }
+}
+
+// ============================================
+// RISK METER CARD
+// ============================================
+.risk-meter {
+  .jurisdiction-item {
+    margin-bottom: 1.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .jurisdiction-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+
+      .jurisdiction-name {
+        font-weight: $font-medium;
+        font-size: $font-body;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        .flag {
+          font-size: 20px;
+        }
+      }
+
+      .risk-label {
+        font-size: $font-small;
+        font-weight: $font-bold;
+        padding: 0.25rem 0.75rem;
+        border-radius: 12px;
+
+        &.high {
+          background: lighten($sentiment-red, 40%);
+          color: $sentiment-red;
+        }
+
+        &.medium {
+          background: lighten($sentiment-yellow, 40%);
+          color: darken($sentiment-yellow, 20%);
+        }
+
+        &.low {
+          background: lighten($sentiment-green, 50%);
+          color: $sentiment-green;
+        }
+      }
+    }
+
+    .risk-bar-container {
+      position: relative;
+      width: 100%;
+      height: 24px;
+      background: $neutral-medium-gray;
+      border-radius: 12px;
+      overflow: hidden;
+
+      .risk-bar-fill {
+        height: 100%;
+        border-radius: 12px;
+        transition: width 0.8s ease;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 0.75rem;
+
+        .risk-percentage {
+          font-size: $font-tiny;
+          font-weight: $font-bold;
+          color: $neutral-white;
+        }
+
+        &.high {
+          background: linear-gradient(90deg, $sentiment-red 0%, darken($sentiment-red, 10%) 100%);
+        }
+
+        &.medium {
+          background: linear-gradient(90deg, $sentiment-yellow 0%, darken($sentiment-yellow, 10%) 100%);
+        }
+
+        &.low {
+          background: linear-gradient(90deg, $sentiment-green 0%, darken($sentiment-green, 10%) 100%);
+        }
+      }
+    }
+  }
+}
+
+// ============================================
+// DEADLINES CARD
+// ============================================
+.deadlines-list {
+  .deadline-item {
+    display: flex;
+    gap: 1rem;
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    border-radius: 4px;
+    background: $neutral-light-gray;
+    transition: background 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+      background: darken($neutral-light-gray, 3%);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .deadline-marker {
+      flex-shrink: 0;
+      width: 4px;
+      border-radius: 2px;
+
+      &.urgent {
+        background: $sentiment-red;
+      }
+
+      &.soon {
+        background: $sentiment-orange;
+      }
+
+      &.upcoming {
+        background: $sentiment-yellow;
+      }
+
+      &.future {
+        background: $neutral-dark-gray;
+      }
+    }
+
+    .deadline-content {
+      flex-grow: 1;
+
+      .deadline-date {
+        font-weight: $font-bold;
+        font-size: $font-body;
+        color: $text-dark;
+        margin-bottom: 0.25rem;
+      }
+
+      .deadline-title {
+        font-size: $font-body;
+        color: $text-body;
+        margin-bottom: 0.25rem;
+      }
+
+      .deadline-countdown {
+        font-size: $font-small;
+        color: $text-light;
+        font-style: italic;
+      }
+    }
+
+    .deadline-icon {
+      flex-shrink: 0;
+      font-size: 20px;
+      color: $text-light;
+    }
+  }
+
+  .deadline-controls {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid $neutral-medium-gray;
+
+    button {
+      flex: 1;
+      padding: 0.5rem;
+      border: 1px solid $neutral-medium-gray;
+      background: $neutral-white;
+      color: $text-body;
+      border-radius: 4px;
+      font-size: $font-small;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: $primary-light-blue;
+        border-color: $primary-dark-blue;
+      }
+
+      &.active {
+        background: $primary-dark-blue;
+        color: $neutral-white;
+      }
+    }
+  }
+}
+
+// ============================================
+// TIMELINE CARD
+// ============================================
+.timeline {
+  .timeline-container {
+    position: relative;
+    padding: 1rem 0;
+  }
+
+  .timeline-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+
+    &:last-child {
+      margin-bottom: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 30px;
+      bottom: -24px;
+      width: 2px;
+      background: $neutral-medium-gray;
+    }
+
+    .timeline-marker {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: $font-small;
+      font-weight: $font-bold;
+      z-index: 1;
+      position: relative;
+
+      &.past {
+        background: $neutral-dark-gray;
+        color: $neutral-white;
+      }
+
+      &.current {
+        background: $primary-dark-blue;
+        color: $neutral-white;
+        box-shadow: 0 0 0 4px rgba($primary-dark-blue, 0.2);
+      }
+
+      &.future {
+        background: $neutral-light-gray;
+        border: 2px solid $neutral-dark-gray;
+        color: $text-light;
+      }
+    }
+
+    .timeline-content {
+      flex-grow: 1;
+      padding-top: 0.25rem;
+
+      .timeline-date {
+        font-size: $font-small;
+        color: $text-light;
+        margin-bottom: 0.25rem;
+      }
+
+      .timeline-title {
+        font-weight: $font-medium;
+        font-size: $font-body;
+        color: $text-dark;
+        margin-bottom: 0.25rem;
+      }
+
+      .timeline-description {
+        font-size: $font-small;
+        color: $text-body;
+        line-height: $line-height-loose;
+      }
+    }
+  }
+
+  .timeline-controls {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid $neutral-medium-gray;
+
+    button {
+      flex: 1;
+      padding: 0.5rem;
+      border: 1px solid $neutral-medium-gray;
+      background: $neutral-white;
+      color: $text-body;
+      border-radius: 4px;
+      font-size: $font-small;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: $primary-light-blue;
+        border-color: $primary-dark-blue;
+      }
+    }
+  }
+}
+
+// ============================================
+// NEWSLETTER CONTENT (BELOW FOLD)
+// ============================================
+.newsletter-content {
+  background: $neutral-white;
+  border-radius: 8px;
+  padding: 2rem;
+  @include card-shadow;
+  margin-bottom: 2rem;
+
+  .content-section {
+    margin-bottom: 2.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 3px solid $primary-dark-blue;
+
+      .section-icon {
+        font-size: 28px;
+      }
+
+      h2 {
+        margin: 0;
+        color: $primary-navy;
+      }
+    }
+
+    .subsection {
+      margin-bottom: 1.5rem;
+
+      h3 {
+        color: $text-dark;
+        margin-bottom: 0.75rem;
+      }
+
+      .article-item {
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-left: 4px solid $primary-light-blue;
+        background: $neutral-light-gray;
+        border-radius: 0 4px 4px 0;
+
+        .article-title {
+          font-weight: $font-bold;
+          font-size: $font-body;
+          margin-bottom: 0.5rem;
+          color: $text-dark;
+        }
+
+        .article-summary {
+          font-size: $font-body;
+          line-height: $line-height-loose;
+          margin-bottom: 0.5rem;
+          color: $text-body;
+        }
+
+        .article-meta {
+          display: flex;
+          gap: 1rem;
+          font-size: $font-small;
+          color: $text-light;
+
+          .article-source,
+          .article-date {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+          }
+        }
+
+        .article-cta {
+          margin-top: 0.75rem;
+          font-size: $font-small;
+          font-weight: $font-medium;
+          color: $primary-dark-blue;
+
+          &:hover {
+            color: $primary-navy;
+          }
+        }
+      }
+    }
+  }
+
+  .compliance-callout {
+    background: lighten($sentiment-yellow, 45%);
+    border-left: 4px solid $sentiment-yellow;
+    padding: 1rem;
+    border-radius: 0 4px 4px 0;
+    margin: 1rem 0;
+
+    .callout-title {
+      font-weight: $font-bold;
+      color: darken($sentiment-yellow, 25%);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      &::before {
+        content: "💼";
+        font-size: 18px;
+      }
+    }
+
+    .callout-content {
+      font-size: $font-body;
+      line-height: $line-height-loose;
+      color: $text-dark;
+    }
+  }
+}
+
+// ============================================
+// FOOTER
+// ============================================
+.site-footer {
+  background: $text-dark;
+  color: $neutral-white;
+  padding: 2rem 0;
+  margin-top: 3rem;
+
+  .footer-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+
+      a {
+        color: $neutral-white;
+        font-size: $font-small;
+        opacity: 0.8;
+        transition: opacity 0.2s ease;
+
+        &:hover {
+          opacity: 1;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .footer-copyright {
+      font-size: $font-small;
+      opacity: 0.7;
+    }
+  }
+}
+
+// ============================================
+// UTILITY CLASSES
+// ============================================
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mt-1 {
+  margin-top: 0.5rem;
+}
+
+.mt-2 {
+  margin-top: 1rem;
+}
+
+.mt-3 {
+  margin-top: 1.5rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 1rem;
+}
+
+.mb-3 {
+  margin-bottom: 1.5rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+// ============================================
+// PRINT STYLES
+// ============================================
+@media print {
+  .dashboard-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid $neutral-medium-gray;
+  }
+
+  .site-header,
+  .site-footer {
+    display: none;
+  }
+
+  body {
+    background: $neutral-white;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}

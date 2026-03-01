@@ -1,0 +1,393 @@
+/* Dashboard Cards — Component Styles */
+
+/* CARD 1: Sentiment Dashboard */
+.sentiment-gauge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.gauge-container {
+  position: relative;
+  width: 200px;
+  height: 120px;
+}
+
+.gauge-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Gauge segments */
+.gauge-segment {
+  transition: opacity 0.3s ease;
+}
+
+.gauge-segment-red {
+  fill: var(--color-sentiment-red);
+  opacity: 0.3;
+}
+
+.gauge-segment-orange {
+  fill: var(--color-sentiment-orange);
+  opacity: 0.3;
+}
+
+.gauge-segment-yellow {
+  fill: var(--color-sentiment-yellow);
+  opacity: 0.3;
+}
+
+.gauge-segment-green {
+  fill: var(--color-sentiment-green);
+  opacity: 0.3;
+}
+
+.gauge-segment-blue {
+  fill: var(--color-sentiment-blue);
+  opacity: 0.3;
+}
+
+.gauge-needle {
+  fill: var(--color-text-dark);
+  transition: transform 0.5s ease;
+}
+
+.sentiment-label {
+  font-size: 28px;
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  margin: 0;
+}
+
+.sentiment-trend {
+  font-size: var(--font-size-small);
+  color: var(--color-text-light);
+  text-align: center;
+}
+
+.sentiment-detail {
+  font-size: var(--font-size-small);
+  color: var(--color-text-body);
+  background-color: var(--color-light-gray);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  margin-top: var(--spacing-md);
+}
+
+/* CARD 2: Key Events */
+.event-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.event-item {
+  padding: var(--spacing-md);
+  border-left: 4px solid transparent;
+  margin-bottom: var(--spacing-md);
+  background-color: var(--color-light-gray);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.event-item:hover {
+  background-color: var(--color-white);
+  border-left-color: var(--color-primary-dark-blue);
+}
+
+.event-item.critical {
+  border-left-color: var(--color-sentiment-red);
+  background-color: rgba(211, 47, 47, 0.05);
+}
+
+.event-item.important {
+  border-left-color: var(--color-sentiment-orange);
+  background-color: rgba(245, 124, 0, 0.05);
+}
+
+.event-item.watch {
+  border-left-color: var(--color-sentiment-yellow);
+  background-color: rgba(251, 192, 45, 0.05);
+}
+
+.event-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.event-icon {
+  font-size: 18px;
+  min-width: 24px;
+  text-align: center;
+}
+
+.event-title {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-dark);
+  margin: 0;
+  flex: 1;
+}
+
+.event-date {
+  font-size: var(--font-size-tiny);
+  color: var(--color-text-light);
+  white-space: nowrap;
+}
+
+.event-summary {
+  font-size: var(--font-size-small);
+  color: var(--color-text-body);
+  margin: 0;
+  line-height: var(--line-height-normal);
+}
+
+.event-filter {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.filter-btn {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: var(--font-size-small);
+  border: 1px solid var(--color-medium-gray);
+  background-color: var(--color-white);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  border-color: var(--color-primary-dark-blue);
+  background-color: var(--color-primary-light-blue);
+  color: var(--color-primary-dark-blue);
+}
+
+/* CARD 3: Risk Meter */
+.risk-bar-group {
+  margin-bottom: var(--spacing-lg);
+}
+
+.risk-jurisdiction {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.risk-jurisdiction-flag {
+  font-size: 24px;
+  min-width: 32px;
+  text-align: center;
+}
+
+.risk-jurisdiction-name {
+  min-width: 50px;
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+}
+
+.risk-bar-container {
+  flex: 1;
+  position: relative;
+  background-color: var(--color-light-gray);
+  height: 20px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.risk-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-sentiment-green) 0%, var(--color-sentiment-yellow) 40%, var(--color-sentiment-red) 100%);
+  transition: width 0.5s ease;
+}
+
+.risk-percentage {
+  font-size: var(--font-size-small);
+  color: var(--color-text-light);
+  min-width: 40px;
+  text-align: right;
+}
+
+.risk-label {
+  font-size: var(--font-size-tiny);
+  color: var(--color-text-light);
+  margin-top: var(--spacing-xs);
+}
+
+/* CARD 4: Upcoming Deadlines */
+.deadline-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.deadline-item {
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  border-left: 4px solid transparent;
+  background-color: var(--color-light-gray);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.deadline-item:hover {
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-md);
+}
+
+.deadline-item.urgent {
+  border-left-color: var(--color-sentiment-red);
+  background-color: rgba(211, 47, 47, 0.05);
+}
+
+.deadline-item.soon {
+  border-left-color: var(--color-sentiment-orange);
+  background-color: rgba(245, 124, 0, 0.05);
+}
+
+.deadline-item.track {
+  border-left-color: var(--color-sentiment-yellow);
+  background-color: rgba(251, 192, 45, 0.05);
+}
+
+.deadline-item.future {
+  border-left-color: var(--color-medium-gray);
+}
+
+.deadline-date {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-dark);
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.deadline-event {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-dark);
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.deadline-timeaway {
+  font-size: var(--font-size-tiny);
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+.deadline-type {
+  display: inline-block;
+  margin-right: var(--spacing-xs);
+  font-size: 14px;
+}
+
+/* CARD 5: Timeline */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--color-primary-dark-blue), var(--color-medium-gray));
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-lg);
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -25px;
+  top: 2px;
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-primary-dark-blue);
+  border: 2px solid var(--color-white);
+  border-radius: 50%;
+}
+
+.timeline-item.current::before {
+  background-color: var(--color-sentiment-orange);
+  width: 16px;
+  height: 16px;
+  left: -28px;
+  top: 0;
+}
+
+.timeline-date {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-dark);
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.timeline-event {
+  font-size: var(--font-size-body);
+  color: var(--color-text-body);
+  margin: 0;
+}
+
+.timeline-icon {
+  display: inline-block;
+  margin-right: var(--spacing-sm);
+  font-size: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .gauge-container {
+    width: 150px;
+    height: 90px;
+  }
+
+  .sentiment-label {
+    font-size: 24px;
+  }
+
+  .event-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .event-date {
+    align-self: flex-end;
+  }
+
+  .risk-jurisdiction {
+    flex-wrap: wrap;
+  }
+
+  .risk-bar-container {
+    min-width: 150px;
+  }
+
+  .timeline {
+    padding-left: 24px;
+  }
+
+  .timeline-item::before {
+    left: -20px;
+  }
+
+  .timeline-item.current::before {
+    left: -23px;
+  }
+}

@@ -1,0 +1,47 @@
+# AI Governance Newsletter - Jekyll Configuration
+title: AI Governance Newsletter
+description: Weekly insights on AI regulation for compliance practitioners
+baseurl: "" # Update with your GitHub Pages path if needed
+url: "" # Update with your GitHub Pages URL
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  newsletters:
+    output: true
+    permalink: /newsletter/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "newsletters"
+    values:
+      layout: "newsletter"
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+
+# Sass configuration
+sass:
+  style: compressed
+  sass_dir: _sass
+
+# Newsletter settings
+newsletter:
+  author: Rill (AI Governance Team)
+  email: otterlover575@gmail.com
+  frequency: Weekly
+  timezone: America/New_York

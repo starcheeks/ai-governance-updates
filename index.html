@@ -1,0 +1,502 @@
+---
+layout: default
+title: Dashboard
+date: 2026-03-01 08:00:00 -0500
+description: AI governance compliance dashboard - weekly regulatory insights for auditors and compliance officers
+---
+
+<section class="dashboard">
+  <div class="dashboard-grid">
+    
+    <!-- CARD 1: Sentiment Gauge -->
+    <div class="dashboard-card card-sentiment" id="sentiment-card">
+      <div class="card-header">
+        <h3>AI Governance Sentiment</h3>
+        <span class="card-icon">📊</span>
+      </div>
+      <div class="card-body">
+        <div class="sentiment-gauge">
+          <div class="gauge-container">
+            <!-- Rendered by JavaScript -->
+          </div>
+          <div class="sentiment-trend">
+            <span class="trend-arrow">↑</span>
+            Shifted 15% tighter this month (vs +5% last)
+          </div>
+          <div class="sentiment-controls">
+            <button data-period="7-day">7-day</button>
+            <button data-period="30-day" class="active">30-day</button>
+            <button data-period="90-day">90-day</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="#contributing-events" class="card-cta">View contributing events →</a>
+      </div>
+    </div>
+
+    <!-- CARD 2: This Week's Key Events -->
+    <div class="dashboard-card card-key-events" id="key-events-card">
+      <div class="card-header">
+        <h3>This Week's Key Events</h3>
+        <span class="card-icon">🔔</span>
+      </div>
+      <div class="card-body">
+        <div class="key-events-list">
+          
+          <!-- Critical Events -->
+          <div class="event-category">
+            <div class="category-header">
+              <span class="severity-badge critical">
+                🔴 CRITICAL (1)
+              </span>
+            </div>
+            <div class="event-item critical" data-event-id="eu-ai-act-update">
+              <div class="event-title">EU AI Act Draft Updated Annex 3 Schedule</div>
+              <div class="event-meta">
+                <span class="event-date">📅 Due: April 15, 2026</span>
+                <span class="event-jurisdiction">🇪🇺 EU</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Important Events -->
+          <div class="event-category">
+            <div class="category-header">
+              <span class="severity-badge important">
+                🟠 IMPORTANT (2)
+              </span>
+            </div>
+            <div class="event-item important" data-event-id="us-executive-order">
+              <div class="event-title">US Executive Order Clarification Released</div>
+              <div class="event-meta">
+                <span class="event-date">📅 March 1, 2026</span>
+                <span class="event-jurisdiction">🇺🇸 US</span>
+              </div>
+            </div>
+            <div class="event-item important" data-event-id="nist-framework">
+              <div class="event-title">NIST AI Framework v2.0 Comment Period Closes</div>
+              <div class="event-meta">
+                <span class="event-date">📅 March 15, 2026</span>
+                <span class="event-jurisdiction">🇺🇸 US</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Watch Events -->
+          <div class="event-category">
+            <div class="category-header">
+              <span class="severity-badge watch">
+                🟡 WATCH (2)
+              </span>
+            </div>
+            <div class="event-item watch" data-event-id="uk-lords-hearing">
+              <div class="event-title">UK House of Lords AI Governance Hearing</div>
+              <div class="event-meta">
+                <span class="event-date">📅 March 8, 2026</span>
+                <span class="event-jurisdiction">🇬🇧 UK</span>
+              </div>
+            </div>
+            <div class="event-item watch" data-event-id="china-policy">
+              <div class="event-title">China Updates AI Development Policy</div>
+              <div class="event-meta">
+                <span class="event-date">📅 February 28, 2026</span>
+                <span class="event-jurisdiction">🇨🇳 China</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="view-all">
+            <a href="#full-events">View all 8 events →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3: Regulatory Risk Meter -->
+    <div class="dashboard-card card-risk-meter" id="risk-meter-card">
+      <div class="card-header">
+        <h3>Regulatory Risk Level</h3>
+        <span class="card-icon">⚠️</span>
+      </div>
+      <div class="card-body">
+        <p style="font-size: 12px; color: #757575; margin-bottom: 1rem;">This Quarter</p>
+        <div class="risk-meter">
+          
+          <div class="jurisdiction-item">
+            <div class="jurisdiction-header">
+              <div class="jurisdiction-name">
+                <span class="flag">🇪🇺</span>
+                EU
+              </div>
+              <span class="risk-label high">HIGH RISK</span>
+            </div>
+            <div class="risk-bar-container">
+              <div class="risk-bar-fill high" data-risk="78" style="width: 0%;">
+                <span class="risk-percentage">78%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="jurisdiction-item">
+            <div class="jurisdiction-header">
+              <div class="jurisdiction-name">
+                <span class="flag">🇨🇳</span>
+                China
+              </div>
+              <span class="risk-label high">HIGH</span>
+            </div>
+            <div class="risk-bar-container">
+              <div class="risk-bar-fill high" data-risk="72" style="width: 0%;">
+                <span class="risk-percentage">72%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="jurisdiction-item">
+            <div class="jurisdiction-header">
+              <div class="jurisdiction-name">
+                <span class="flag">🇬🇧</span>
+                UK
+              </div>
+              <span class="risk-label medium">MEDIUM</span>
+            </div>
+            <div class="risk-bar-container">
+              <div class="risk-bar-fill medium" data-risk="55" style="width: 0%;">
+                <span class="risk-percentage">55%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="jurisdiction-item">
+            <div class="jurisdiction-header">
+              <div class="jurisdiction-name">
+                <span class="flag">🇺🇸</span>
+                US
+              </div>
+              <span class="risk-label medium">MEDIUM</span>
+            </div>
+            <div class="risk-bar-container">
+              <div class="risk-bar-fill medium" data-risk="42" style="width: 0%;">
+                <span class="risk-percentage">42%</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="#risk-analysis" class="card-cta">View risk factors →</a>
+      </div>
+    </div>
+
+    <!-- CARD 4: Upcoming Deadlines -->
+    <div class="dashboard-card card-deadlines" id="deadlines-card">
+      <div class="card-header">
+        <h3>Upcoming Deadlines</h3>
+        <span class="card-icon">📅</span>
+      </div>
+      <div class="card-body">
+        <div class="deadlines-list">
+          
+          <div class="deadline-item" data-date="2026-03-15">
+            <div class="deadline-marker urgent"></div>
+            <div class="deadline-content">
+              <div class="deadline-date">March 15</div>
+              <div class="deadline-title">EU AI Act Compliance Comments Due</div>
+              <div class="deadline-countdown">14 days away</div>
+            </div>
+            <div class="deadline-icon">📋</div>
+          </div>
+
+          <div class="deadline-item" data-date="2026-04-01">
+            <div class="deadline-marker soon"></div>
+            <div class="deadline-content">
+              <div class="deadline-date">April 1</div>
+              <div class="deadline-title">UK Responsible AI Guidance Published</div>
+              <div class="deadline-countdown">31 days away</div>
+            </div>
+            <div class="deadline-icon">📄</div>
+          </div>
+
+          <div class="deadline-item" data-date="2026-04-15">
+            <div class="deadline-marker soon"></div>
+            <div class="deadline-content">
+              <div class="deadline-date">April 15</div>
+              <div class="deadline-title">EU AI Act Annex 3 Update Effective</div>
+              <div class="deadline-countdown">45 days away</div>
+            </div>
+            <div class="deadline-icon">⚖️</div>
+          </div>
+
+          <div class="deadline-item" data-date="2026-04-30">
+            <div class="deadline-marker upcoming"></div>
+            <div class="deadline-content">
+              <div class="deadline-date">April 30</div>
+              <div class="deadline-title">US Senate AI Regulation Hearing (TBD)</div>
+              <div class="deadline-countdown">60 days away</div>
+            </div>
+            <div class="deadline-icon">🗣️</div>
+          </div>
+
+        </div>
+        <div class="deadline-controls">
+          <button data-view="calendar" class="active">Calendar</button>
+          <button data-view="list">List View</button>
+        </div>
+      </div>
+      <div class="card-footer">
+        <a href="#" class="card-cta">Set reminders →</a>
+      </div>
+    </div>
+
+    <!-- CARD 5: Historical Timeline -->
+    <div class="dashboard-card card-timeline" id="timeline-card">
+      <div class="card-header">
+        <h3>Regulatory Timeline</h3>
+        <span class="card-icon">⏱️</span>
+      </div>
+      <div class="card-body">
+        <p style="font-size: 12px; color: #757575; margin-bottom: 1rem;">Past 12 months + next 6</p>
+        <div class="timeline">
+          <div class="timeline-container">
+            
+            <div class="timeline-item">
+              <div class="timeline-marker past">✓</div>
+              <div class="timeline-content">
+                <div class="timeline-date">January 2025</div>
+                <div class="timeline-title">EU AI Act Passed</div>
+                <div class="timeline-description">Comprehensive AI regulation framework approved</div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker past">✓</div>
+              <div class="timeline-content">
+                <div class="timeline-date">June 2025</div>
+                <div class="timeline-title">NIST AI Framework 1.0</div>
+                <div class="timeline-description">Risk management framework released</div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker past">✓</div>
+              <div class="timeline-content">
+                <div class="timeline-date">October 2025</div>
+                <div class="timeline-title">UK AI Framework Update</div>
+                <div class="timeline-description">Revised guidance on responsible AI</div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker current">●</div>
+              <div class="timeline-content">
+                <div class="timeline-date">March 2026</div>
+                <div class="timeline-title">We are here</div>
+                <div class="timeline-description">Current position in regulatory cycle</div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker future">○</div>
+              <div class="timeline-content">
+                <div class="timeline-date">April 2026</div>
+                <div class="timeline-title">EU Enforcement Begins</div>
+                <div class="timeline-description">First compliance audits expected</div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-marker future">○</div>
+              <div class="timeline-content">
+                <div class="timeline-date">June 2026</div>
+                <div class="timeline-title">US AI Bill? (TBD)</div>
+                <div class="timeline-description">Potential federal legislation vote</div>
+              </div>
+            </div>
+
+          </div>
+          <div class="timeline-controls">
+            <button data-action="expand">Expand timeline</button>
+            <button data-action="export">PDF export</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Newsletter Content (Below the Fold) -->
+<section class="newsletter-content">
+  
+  <div class="content-section">
+    <div class="section-header">
+      <span class="section-icon">🇪🇺</span>
+      <h2>European Union</h2>
+    </div>
+    
+    <div class="subsection">
+      <h3>Regulatory Activity</h3>
+      
+      <div class="article-item">
+        <div class="article-title">EU AI Act Annex 3 Schedule Updated with Stricter Compliance Timelines</div>
+        <div class="article-summary">
+          The European Commission released revised implementation schedules for high-risk AI systems under Annex 3, 
+          moving several compliance deadlines forward by 3-6 months. Organizations must submit conformity assessments 
+          by April 15, 2026 instead of the previously announced July 1 deadline.
+        </div>
+        <div class="article-meta">
+          <span class="article-source">📰 European Commission</span>
+          <span class="article-date">📅 February 28, 2026</span>
+        </div>
+        <a href="#" class="article-cta">Read more →</a>
+      </div>
+
+      <div class="compliance-callout">
+        <div class="callout-title">What This Means for You</div>
+        <div class="callout-content">
+          If your organization develops or deploys high-risk AI systems in the EU, you now have 45 days to submit 
+          conformity documentation. Start internal audits immediately and engage with notified bodies for assessment scheduling.
+        </div>
+      </div>
+
+      <div class="article-item">
+        <div class="article-title">EDPB Issues Guidance on AI and GDPR Intersection</div>
+        <div class="article-summary">
+          The European Data Protection Board published detailed guidance clarifying how existing GDPR provisions 
+          apply to AI systems, particularly regarding automated decision-making and data minimization requirements.
+        </div>
+        <div class="article-meta">
+          <span class="article-source">📰 EDPB</span>
+          <span class="article-date">📅 February 25, 2026</span>
+        </div>
+        <a href="#" class="article-cta">Read more →</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="section-header">
+      <span class="section-icon">🇺🇸</span>
+      <h2>United States</h2>
+    </div>
+    
+    <div class="subsection">
+      <h3>Federal Developments</h3>
+      
+      <div class="article-item">
+        <div class="article-title">NIST AI Framework v2.0 Comment Period Closing Soon</div>
+        <div class="article-summary">
+          The National Institute of Standards and Technology is accepting public comments on the proposed AI Risk 
+          Management Framework v2.0 through March 15, 2026. The updated framework includes expanded sections on 
+          generative AI and foundation model governance.
+        </div>
+        <div class="article-meta">
+          <span class="article-source">📰 NIST</span>
+          <span class="article-date">📅 February 27, 2026</span>
+        </div>
+        <a href="#" class="article-cta">Read more →</a>
+      </div>
+
+      <div class="compliance-callout">
+        <div class="callout-title">What This Means for You</div>
+        <div class="callout-content">
+          Review the draft framework and submit comments if your organization uses foundation models or generative AI. 
+          The final version will likely shape future federal procurement requirements and industry best practices.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="subsection">
+      <h3>State-Level Movements</h3>
+      
+      <div class="article-item">
+        <div class="article-title">California AI Transparency Bill Advances in Committee</div>
+        <div class="article-summary">
+          California AB 1234, requiring disclosure labels on AI-generated content, passed the Assembly Privacy Committee 
+          with bipartisan support. The bill would mandate watermarking and disclosure for synthetic media.
+        </div>
+        <div class="article-meta">
+          <span class="article-source">📰 California State Assembly</span>
+          <span class="article-date">📅 February 26, 2026</span>
+        </div>
+        <a href="#" class="article-cta">Read more →</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="section-header">
+      <span class="section-icon">🌏</span>
+      <h2>Global & Industry</h2>
+    </div>
+    
+    <div class="subsection">
+      <h3>International Developments</h3>
+      
+      <div class="article-item">
+        <div class="article-title">UK House of Lords Proposes AI Governance Framework</div>
+        <div class="article-summary">
+          The House of Lords AI Committee released a white paper proposing a principles-based regulatory approach 
+          focused on sector-specific regulators rather than a single omnibus AI law.
+        </div>
+        <div class="article-meta">
+          <span class="article-source">📰 UK Parliament</span>
+          <span class="article-date">📅 February 24, 2026</span>
+        </div>
+        <a href="#" class="article-cta">Read more →</a>
+      </div>
+
+      <div class="article-item">
+        <div class="article-title">China Updates AI Development Policy with Security Focus</div>
+        <div class="article-summary">
+          China's Cyberspace Administration released updated guidelines emphasizing "secure and controllable" AI development, 
+          with new requirements for algorithm registration and content filtering.
+        </div>
+        <div class="article-meta">
+          <span class="article-source">📰 CAC</span>
+          <span class="article-date">📅 February 28, 2026</span>
+        </div>
+        <a href="#" class="article-cta">Read more →</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="section-header">
+      <span class="section-icon">📊</span>
+      <h2>Research & Analysis</h2>
+    </div>
+    
+    <div class="subsection">
+      <h3>New Reports & Studies</h3>
+      
+      <div class="article-item">
+        <div class="article-title">Stanford HAI Releases 2026 AI Index Report</div>
+        <div class="article-summary">
+          The latest AI Index report shows 147% increase in AI-related legislation globally compared to 2025, 
+          with enforcement actions up 89% year-over-year.
+        </div>
+        <div class="article-meta">
+          <span class="article-source">📰 Stanford HAI</span>
+          <span class="article-date">📅 March 1, 2026</span>
+        </div>
+        <a href="#" class="article-cta">Read more →</a>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<!-- Archive Link -->
+<section class="text-center" style="margin: 3rem 0;">
+  <a href="{{ '/archive' | relative_url }}" style="font-size: 16px; font-weight: 500;">
+    View Previous Newsletters →
+  </a>
+</section>

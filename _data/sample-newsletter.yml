@@ -1,0 +1,262 @@
+# Sample Newsletter Data Structure
+# This file demonstrates the data structure for the AI Governance Newsletter
+
+# Current sentiment data
+sentiment:
+  current_value: 62
+  label: "Cautious"
+  zone: "yellow"
+  trend: "Shifted 15% tighter this month (vs +5% last)"
+  period: "30-day"
+  historical:
+    - period: "7-day"
+      value: 58
+    - period: "30-day"
+      value: 62
+    - period: "90-day"
+      value: 55
+
+# Key events for this week
+key_events:
+  critical:
+    - id: "eu-ai-act-update"
+      title: "EU AI Act Draft Updated Annex 3 Schedule"
+      date: "2026-04-15"
+      jurisdiction: "EU"
+      jurisdiction_flag: "🇪🇺"
+      severity: "critical"
+      summary: "Revised implementation schedules move compliance deadlines forward by 3-6 months"
+      
+  important:
+    - id: "us-executive-order"
+      title: "US Executive Order Clarification Released"
+      date: "2026-03-01"
+      jurisdiction: "US"
+      jurisdiction_flag: "🇺🇸"
+      severity: "important"
+      summary: "New guidance on federal AI procurement and deployment standards"
+      
+    - id: "nist-framework"
+      title: "NIST AI Framework v2.0 Comment Period Closes"
+      date: "2026-03-15"
+      jurisdiction: "US"
+      jurisdiction_flag: "🇺🇸"
+      severity: "important"
+      summary: "Final opportunity to provide feedback on updated framework"
+      
+  watch:
+    - id: "uk-lords-hearing"
+      title: "UK House of Lords AI Governance Hearing"
+      date: "2026-03-08"
+      jurisdiction: "UK"
+      jurisdiction_flag: "🇬🇧"
+      severity: "watch"
+      summary: "Parliamentary committee reviews proposed AI regulatory framework"
+      
+    - id: "china-policy"
+      title: "China Updates AI Development Policy"
+      date: "2026-02-28"
+      jurisdiction: "China"
+      jurisdiction_flag: "🇨🇳"
+      severity: "watch"
+      summary: "New security-focused guidelines for algorithm registration"
+
+# Regulatory risk by jurisdiction
+risk_meter:
+  - jurisdiction: "EU"
+    flag: "🇪🇺"
+    risk_level: 78
+    risk_label: "HIGH RISK"
+    risk_class: "high"
+    factors:
+      - "Rapid AI Act implementation"
+      - "Strict enforcement signals"
+      - "High compliance costs"
+      
+  - jurisdiction: "China"
+    flag: "🇨🇳"
+    risk_level: 72
+    risk_label: "HIGH"
+    risk_class: "high"
+    factors:
+      - "Frequent policy updates"
+      - "Algorithm registration requirements"
+      - "Content control mandates"
+      
+  - jurisdiction: "UK"
+    flag: "🇬🇧"
+    risk_level: 55
+    risk_label: "MEDIUM"
+    risk_class: "medium"
+    factors:
+      - "Principles-based approach"
+      - "Sector-specific regulation"
+      - "Moderate enforcement"
+      
+  - jurisdiction: "US"
+    flag: "🇺🇸"
+    risk_level: 42
+    risk_label: "MEDIUM"
+    risk_class: "medium"
+    factors:
+      - "State-level fragmentation"
+      - "Federal guidance evolving"
+      - "Industry self-regulation emphasis"
+
+# Upcoming deadlines
+deadlines:
+  - id: "eu-compliance-comments"
+    date: "2026-03-15"
+    title: "EU AI Act Compliance Comments Due"
+    icon: "📋"
+    type: "deadline"
+    urgency: "urgent"
+    description: "Final submission for conformity assessment documentation"
+    
+  - id: "uk-guidance-published"
+    date: "2026-04-01"
+    title: "UK Responsible AI Guidance Published"
+    icon: "📄"
+    type: "guidance"
+    urgency: "soon"
+    description: "Expected release of updated sector-specific AI guidance"
+    
+  - id: "eu-annex3-effective"
+    date: "2026-04-15"
+    title: "EU AI Act Annex 3 Update Effective"
+    icon: "⚖️"
+    type: "legislation"
+    urgency: "soon"
+    description: "Revised high-risk AI system classifications take effect"
+    
+  - id: "us-senate-hearing"
+    date: "2026-04-30"
+    title: "US Senate AI Regulation Hearing (TBD)"
+    icon: "🗣️"
+    type: "hearing"
+    urgency: "upcoming"
+    description: "Congressional hearing on federal AI legislation proposals"
+
+# Historical timeline
+timeline:
+  past:
+    - date: "2025-01"
+      title: "EU AI Act Passed"
+      description: "Comprehensive AI regulation framework approved"
+      type: "legislation"
+      
+    - date: "2025-06"
+      title: "NIST AI Framework 1.0"
+      description: "Risk management framework released"
+      type: "guidance"
+      
+    - date: "2025-10"
+      title: "UK AI Framework Update"
+      description: "Revised guidance on responsible AI"
+      type: "guidance"
+      
+  current:
+    date: "2026-03"
+    title: "We are here"
+    description: "Current position in regulatory cycle"
+    
+  future:
+    - date: "2026-04"
+      title: "EU Enforcement Begins"
+      description: "First compliance audits expected"
+      type: "enforcement"
+      
+    - date: "2026-06"
+      title: "US AI Bill? (TBD)"
+      description: "Potential federal legislation vote"
+      type: "legislation"
+
+# Newsletter articles (full content)
+articles:
+  eu:
+    - id: "eu-annex3-update"
+      title: "EU AI Act Annex 3 Schedule Updated with Stricter Compliance Timelines"
+      jurisdiction: "EU"
+      category: "Regulatory Activity"
+      date: "2026-02-28"
+      source: "European Commission"
+      summary: |
+        The European Commission released revised implementation schedules for high-risk AI systems under Annex 3, 
+        moving several compliance deadlines forward by 3-6 months. Organizations must submit conformity assessments 
+        by April 15, 2026 instead of the previously announced July 1 deadline.
+      compliance_impact: |
+        If your organization develops or deploys high-risk AI systems in the EU, you now have 45 days to submit 
+        conformity documentation. Start internal audits immediately and engage with notified bodies for assessment scheduling.
+      url: "#"
+      
+    - id: "edpb-gdpr-guidance"
+      title: "EDPB Issues Guidance on AI and GDPR Intersection"
+      jurisdiction: "EU"
+      category: "Regulatory Activity"
+      date: "2026-02-25"
+      source: "EDPB"
+      summary: |
+        The European Data Protection Board published detailed guidance clarifying how existing GDPR provisions 
+        apply to AI systems, particularly regarding automated decision-making and data minimization requirements.
+      url: "#"
+      
+  us:
+    - id: "nist-framework-v2"
+      title: "NIST AI Framework v2.0 Comment Period Closing Soon"
+      jurisdiction: "US"
+      category: "Federal Developments"
+      date: "2026-02-27"
+      source: "NIST"
+      summary: |
+        The National Institute of Standards and Technology is accepting public comments on the proposed AI Risk 
+        Management Framework v2.0 through March 15, 2026. The updated framework includes expanded sections on 
+        generative AI and foundation model governance.
+      compliance_impact: |
+        Review the draft framework and submit comments if your organization uses foundation models or generative AI. 
+        The final version will likely shape future federal procurement requirements and industry best practices.
+      url: "#"
+      
+    - id: "california-ab1234"
+      title: "California AI Transparency Bill Advances in Committee"
+      jurisdiction: "California"
+      category: "State-Level Movements"
+      date: "2026-02-26"
+      source: "California State Assembly"
+      summary: |
+        California AB 1234, requiring disclosure labels on AI-generated content, passed the Assembly Privacy Committee 
+        with bipartisan support. The bill would mandate watermarking and disclosure for synthetic media.
+      url: "#"
+      
+  global:
+    - id: "uk-lords-white-paper"
+      title: "UK House of Lords Proposes AI Governance Framework"
+      jurisdiction: "UK"
+      category: "International Developments"
+      date: "2026-02-24"
+      source: "UK Parliament"
+      summary: |
+        The House of Lords AI Committee released a white paper proposing a principles-based regulatory approach 
+        focused on sector-specific regulators rather than a single omnibus AI law.
+      url: "#"
+      
+    - id: "china-cac-update"
+      title: "China Updates AI Development Policy with Security Focus"
+      jurisdiction: "China"
+      category: "International Developments"
+      date: "2026-02-28"
+      source: "CAC"
+      summary: |
+        China's Cyberspace Administration released updated guidelines emphasizing "secure and controllable" AI development, 
+        with new requirements for algorithm registration and content filtering.
+      url: "#"
+      
+  research:
+    - id: "stanford-ai-index-2026"
+      title: "Stanford HAI Releases 2026 AI Index Report"
+      category: "Research & Analysis"
+      date: "2026-03-01"
+      source: "Stanford HAI"
+      summary: |
+        The latest AI Index report shows 147% increase in AI-related legislation globally compared to 2025, 
+        with enforcement actions up 89% year-over-year.
+      url: "#"

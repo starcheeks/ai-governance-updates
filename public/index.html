@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI Governance Compliance Newsletter Dashboard — Track regulatory sentiment, events, risks, and deadlines across jurisdictions.">
+  <title>AI Governance Newsletter Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../src/styles/main.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="header-brand">
+        <h1 class="header-title">AI Governance Newsletter</h1>
+        <span class="header-subtitle">Compliance Dashboard</span>
+      </div>
+      <div class="header-meta">
+        <time class="header-date" datetime="2026-02-27">February 27, 2026</time>
+        <span class="header-edition">Weekly Edition #47</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Dashboard -->
+  <main id="main-content" class="dashboard">
+    <div class="dashboard-grid">
+
+      <!-- Card 1: Sentiment Dashboard -->
+      <section class="card card--sentiment" aria-labelledby="sentiment-title" role="region">
+        <div class="card-header">
+          <h2 class="card-title" id="sentiment-title">AI Governance Sentiment</h2>
+          <p class="card-subtitle">Overall regulatory environment</p>
+        </div>
+        <div class="card-body">
+          <!-- SVG Gauge -->
+          <div class="gauge-container" role="img" aria-label="Sentiment gauge showing 75%, Neutral-Favorable zone">
+            <svg class="gauge-svg" viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="gauge-critical" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#D32F2F"/>
+                  <stop offset="100%" stop-color="#E57373"/>
+                </linearGradient>
+                <linearGradient id="gauge-warning" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#E57373"/>
+                  <stop offset="100%" stop-color="#F57C00"/>
+                </linearGradient>
+                <linearGradient id="gauge-neutral" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#F57C00"/>
+                  <stop offset="100%" stop-color="#FBC02D"/>
+                </linearGradient>
+                <linearGradient id="gauge-favorable" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#FBC02D"/>
+                  <stop offset="100%" stop-color="#388E3C"/>
+                </linearGradient>
+                <linearGradient id="gauge-excellent" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#388E3C"/>
+                  <stop offset="100%" stop-color="#1976D2"/>
+                </linearGradient>
+              </defs>
+              <!-- Background track -->
+              <path class="gauge-track" d="M 30 140 A 90 90 0 0 1 210 140" fill="none" stroke="#E0E0E0" stroke-width="18" stroke-linecap="round"/>
+              <!-- Colored arc segments -->
+              <g class="gauge-segments">
+                <!-- These are rendered by JS for precise control -->
+              </g>
+              <!-- Needle -->
+              <g class="gauge-needle" transform="rotate(0, 120, 140)">
+                <line x1="120" y1="140" x2="120" y2="55" stroke="#212121" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="120" cy="140" r="6" fill="#212121"/>
+                <circle cx="120" cy="140" r="3" fill="#FFFFFF"/>
+              </g>
+              <!-- Center label -->
+              <text class="gauge-value" x="120" y="125" text-anchor="middle" font-size="28" font-weight="700" fill="#212121">75%</text>
+              <text class="gauge-label" x="120" y="145" text-anchor="middle" font-size="10" font-weight="500" fill="#757575">NEUTRAL-FAVORABLE</text>
+            </svg>
+            <!-- Gauge legend -->
+            <div class="gauge-legend" aria-hidden="true">
+              <span class="legend-item legend-item--critical" title="Critical: 0-25%"></span>
+              <span class="legend-item legend-item--warning" title="Warning: 25-50%"></span>
+              <span class="legend-item legend-item--neutral" title="Neutral: 50-70%"></span>
+              <span class="legend-item legend-item--favorable" title="Favorable: 70-85%"></span>
+              <span class="legend-item legend-item--excellent" title="Excellent: 85-100%"></span>
+            </div>
+          </div>
+          <!-- Trend -->
+          <div class="sentiment-trend">
+            <span class="trend-arrow trend-arrow--down" aria-label="Trend down">&#9660;</span>
+            <span class="trend-text">Shifted <strong>15% tighter</strong> this month</span>
+          </div>
+          <p class="sentiment-comparison">vs +5% last month</p>
+          <!-- Time toggle -->
+          <div class="toggle-group" role="tablist" aria-label="Sentiment time range">
+            <button class="toggle-btn" role="tab" aria-selected="false" data-range="7">7-day</button>
+            <button class="toggle-btn toggle-btn--active" role="tab" aria-selected="true" data-range="30">30-day</button>
+            <button class="toggle-btn" role="tab" aria-selected="false" data-range="90">90-day</button>
+          </div>
+          <!-- Contributing factors (hidden by default, shown on interaction) -->
+          <div class="sentiment-factors" hidden>
+            <h3 class="factors-title">Contributing Factors</h3>
+            <ul class="factors-list">
+              <li class="factor-item">
+                <span class="factor-name">News Tone</span>
+                <div class="factor-bar-track"><div class="factor-bar" data-value="62" style="width: 62%"></div></div>
+                <span class="factor-value">62</span>
+              </li>
+              <li class="factor-item">
+                <span class="factor-name">Enforcement</span>
+                <div class="factor-bar-track"><div class="factor-bar" data-value="55" style="width: 55%"></div></div>
+                <span class="factor-value">55</span>
+              </li>
+              <li class="factor-item">
+                <span class="factor-name">News Volume</span>
+                <div class="factor-bar-track"><div class="factor-bar" data-value="40" style="width: 40%"></div></div>
+                <span class="factor-value">40</span>
+              </li>
+              <li class="factor-item">
+                <span class="factor-name">Industry Sentiment</span>
+                <div class="factor-bar-track"><div class="factor-bar" data-value="78" style="width: 78%"></div></div>
+                <span class="factor-value">78</span>
+              </li>
+              <li class="factor-item">
+                <span class="factor-name">Market Sentiment</span>
+                <div class="factor-bar-track"><div class="factor-bar" data-value="81" style="width: 81%"></div></div>
+                <span class="factor-value">81</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn--link" data-action="expand-sentiment">View contributing events</button>
+        </div>
+      </section>
+
+      <!-- Card 2: Weekly Events -->
+      <section class="card card--events" aria-labelledby="events-title" role="region">
+        <div class="card-header">
+          <h2 class="card-title" id="events-title">This Week's Key Events</h2>
+        </div>
+        <div class="card-body">
+          <ul class="events-list" role="list">
+            <!-- Critical Event -->
+            <li class="event-item event-item--critical" role="listitem">
+              <button class="event-btn" aria-label="View details: EU AI Act Compliance Deadline Announced" data-event-id="evt-001">
+                <span class="event-severity-badge" aria-label="Critical severity">Critical</span>
+                <div class="event-content">
+                  <h3 class="event-title">EU AI Act Compliance Deadline Announced</h3>
+                  <p class="event-description">European Commission sets March 15 deadline for high-risk AI system compliance documentation submissions.</p>
+                </div>
+                <time class="event-date" datetime="2026-02-25">Feb 25</time>
+              </button>
+            </li>
+            <!-- Important Event -->
+            <li class="event-item event-item--important" role="listitem">
+              <button class="event-btn" aria-label="View details: US Senate AI Safety Hearing Scheduled" data-event-id="evt-002">
+                <span class="event-severity-badge" aria-label="Important severity">Important</span>
+                <div class="event-content">
+                  <h3 class="event-title">US Senate AI Safety Hearing Scheduled</h3>
+                  <p class="event-description">Senate Commerce Committee schedules hearing on AI safety frameworks for March 22.</p>
+                </div>
+                <time class="event-date" datetime="2026-02-26">Feb 26</time>
+              </button>
+            </li>
+            <!-- Watch Event -->
+            <li class="event-item event-item--watch" role="listitem">
+              <button class="event-btn" aria-label="View details: UK AI Safety Institute Publishes Framework Update" data-event-id="evt-003">
+                <span class="event-severity-badge" aria-label="Watch severity">Watch</span>
+                <div class="event-content">
+                  <h3 class="event-title">UK AI Safety Institute Publishes Framework Update</h3>
+                  <p class="event-description">Updated voluntary standards for AI testing and evaluation released for public comment.</p>
+                </div>
+                <time class="event-date" datetime="2026-02-27">Feb 27</time>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn--link" data-action="view-all-events">View all 8 events &rarr;</button>
+        </div>
+      </section>
+
+      <!-- Card 3: Risk Meter -->
+      <section class="card card--risk" aria-labelledby="risk-title" role="region">
+        <div class="card-header">
+          <h2 class="card-title" id="risk-title">Regulatory Risk Level</h2>
+          <p class="card-subtitle">(This Quarter)</p>
+        </div>
+        <div class="card-body">
+          <ul class="risk-list" role="list">
+            <li class="risk-item" data-jurisdiction="EU" role="listitem">
+              <div class="risk-label">
+                <span class="risk-flag" aria-hidden="true">&#x1F1EA;&#x1F1FA;</span>
+                <span class="risk-jurisdiction">EU</span>
+              </div>
+              <div class="risk-bar-track" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" aria-label="EU risk level: 78%, High Risk">
+                <div class="risk-bar risk-bar--high" style="width: 0%" data-target="78"></div>
+              </div>
+              <span class="risk-value risk-value--high">78%</span>
+              <div class="risk-tooltip" role="tooltip" hidden>
+                <strong>Risk Factors:</strong>
+                <ul>
+                  <li>AI Act enforcement phase</li>
+                  <li>Frequent clarifications</li>
+                  <li>Strict penalty structure</li>
+                </ul>
+              </div>
+            </li>
+            <li class="risk-item" data-jurisdiction="UK" role="listitem">
+              <div class="risk-label">
+                <span class="risk-flag" aria-hidden="true">&#x1F1EC;&#x1F1E7;</span>
+                <span class="risk-jurisdiction">UK</span>
+              </div>
+              <div class="risk-bar-track" role="progressbar" aria-valuenow="52" aria-valuemin="0" aria-valuemax="100" aria-label="UK risk level: 52%, Medium Risk">
+                <div class="risk-bar risk-bar--medium" style="width: 0%" data-target="52"></div>
+              </div>
+              <span class="risk-value risk-value--medium">52%</span>
+              <div class="risk-tooltip" role="tooltip" hidden>
+                <strong>Risk Factors:</strong>
+                <ul>
+                  <li>Pro-innovation framework evolving</li>
+                  <li>Sector-specific regulation increasing</li>
+                  <li>AI Safety Institute expanding scope</li>
+                </ul>
+              </div>
+            </li>
+            <li class="risk-item" data-jurisdiction="US" role="listitem">
+              <div class="risk-label">
+                <span class="risk-flag" aria-hidden="true">&#x1F1FA;&#x1F1F8;</span>
+                <span class="risk-jurisdiction">US</span>
+              </div>
+              <div class="risk-bar-track" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" aria-label="US risk level: 35%, Low Risk">
+                <div class="risk-bar risk-bar--low" style="width: 0%" data-target="35"></div>
+              </div>
+              <span class="risk-value risk-value--low">35%</span>
+              <div class="risk-tooltip" role="tooltip" hidden>
+                <strong>Risk Factors:</strong>
+                <ul>
+                  <li>Voluntary standards approach</li>
+                  <li>Executive order focus areas</li>
+                  <li>State-level fragmentation risk</li>
+                </ul>
+              </div>
+            </li>
+            <li class="risk-item" data-jurisdiction="CN" role="listitem">
+              <div class="risk-label">
+                <span class="risk-flag" aria-hidden="true">&#x1F1E8;&#x1F1F3;</span>
+                <span class="risk-jurisdiction">China</span>
+              </div>
+              <div class="risk-bar-track" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" aria-label="China risk level: 65%, Medium Risk">
+                <div class="risk-bar risk-bar--medium" style="width: 0%" data-target="65"></div>
+              </div>
+              <span class="risk-value risk-value--medium">65%</span>
+              <div class="risk-tooltip" role="tooltip" hidden>
+                <strong>Risk Factors:</strong>
+                <ul>
+                  <li>Algorithm recommendation rules active</li>
+                  <li>Generative AI measures enforced</li>
+                  <li>Data localization requirements</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Card 4: Timeline Context -->
+      <section class="card card--timeline" aria-labelledby="timeline-title" role="region">
+        <div class="card-header">
+          <h2 class="card-title" id="timeline-title">Regulatory Timeline</h2>
+          <p class="card-subtitle">(Past 12 months + next 6)</p>
+        </div>
+        <div class="card-body">
+          <div class="timeline-scroll" role="group" aria-label="Regulatory timeline" tabindex="0">
+            <div class="timeline-track">
+              <!-- Past events -->
+              <div class="timeline-entry timeline-entry--past" data-date="2025-03">
+                <div class="timeline-dot"></div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-content">
+                  <span class="timeline-month">Mar 2025</span>
+                  <p class="timeline-event">EU AI Act enters into force</p>
+                </div>
+              </div>
+              <div class="timeline-entry timeline-entry--past" data-date="2025-05">
+                <div class="timeline-dot"></div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-content">
+                  <span class="timeline-month">May 2025</span>
+                  <p class="timeline-event">US Executive Order on AI Safety signed</p>
+                </div>
+              </div>
+              <div class="timeline-entry timeline-entry--past" data-date="2025-07">
+                <div class="timeline-dot"></div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-content">
+                  <span class="timeline-month">Jul 2025</span>
+                  <p class="timeline-event">UK AI Safety Institute launched</p>
+                </div>
+              </div>
+              <div class="timeline-entry timeline-entry--past" data-date="2025-09">
+                <div class="timeline-dot"></div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-content">
+                  <span class="timeline-month">Sep 2025</span>
+                  <p class="timeline-event">China generative AI measures effective</p>
+                </div>
+              </div>
+              <div class="timeline-entry timeline-entry--past" data-date="2025-11">
+                <div class="timeline-dot"></div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-content">
+                  <span class="timeline-month">Nov 2025</span>
+                  <p class="timeline-event">G7 AI Code of Conduct finalized</p>
+                </div>
+              </div>
+              <div class="timeline-entry timeline-entry--past" data-date="2026-01">
+                <div class="timeline-dot"></div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-content">
+                  <span class="timeline-month">Jan 2026</span>
+                  <p class="timeline-event">EU AI Act first compliance phase</p>
+                </div>
+              </div>
+              <!-- Current -->
+              <div class="timeline-entry timeline-entry--current" data-date="2026-02" aria-current="date">
+                <div class="timeline-dot timeline-dot--current"></div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-content">
+                  <span class="timeline-month">Feb 2026</span>
+                  <p class="timeline-event"><strong>We are here</strong></p>
+                </div>
+              </div>
+              <!-- Future events -->
+              <div class="timeline-entry timeline-entry--future" data-date="2026-04">
+                <div class="timeline-dot"></div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-content">
+                  <span class="timeline-month">Apr 2026</span>
+                  <p class="timeline-event">EU high-risk AI system registration deadline</p>
+                </div>
+              </div>
+              <div class="timeline-entry timeline-entry--future" data-date="2026-06">
+                <div class="timeline-dot"></div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-content">
+                  <span class="timeline-month">Jun 2026</span>
+                  <p class="timeline-event">US AI safety standards draft published</p>
+                </div>
+              </div>
+              <div class="timeline-entry timeline-entry--future" data-date="2026-08">
+                <div class="timeline-dot"></div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-content">
+                  <span class="timeline-month">Aug 2026</span>
+                  <p class="timeline-event">EU AI Act full enforcement begins</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn--link" data-action="expand-timeline">Expand timeline</button>
+        </div>
+      </section>
+
+      <!-- Card 5: Upcoming Deadlines -->
+      <section class="card card--deadlines" aria-labelledby="deadlines-title" role="region">
+        <div class="card-header">
+          <h2 class="card-title" id="deadlines-title">Upcoming Deadlines &amp; Decisions</h2>
+          <p class="card-subtitle">Next 90 days</p>
+        </div>
+        <div class="card-body">
+          <ol class="deadlines-list" role="list">
+            <li class="deadline-item deadline-item--urgent" role="listitem">
+              <div class="deadline-accent" aria-hidden="true"></div>
+              <div class="deadline-icon" aria-hidden="true">&#x1F4C5;</div>
+              <div class="deadline-content">
+                <h3 class="deadline-title">EU AI Act Compliance Comments Due</h3>
+                <time class="deadline-date" datetime="2026-03-15">March 15, 2026</time>
+                <span class="deadline-countdown">14 days away</span>
+              </div>
+              <div class="deadline-actions">
+                <button class="btn btn--icon" aria-label="Add to calendar" data-action="calendar-export" data-deadline-id="dl-001" title="Export to calendar">&#x1F4C5;</button>
+              </div>
+            </li>
+            <li class="deadline-item deadline-item--soon" role="listitem">
+              <div class="deadline-accent" aria-hidden="true"></div>
+              <div class="deadline-icon" aria-hidden="true">&#x2696;&#xFE0F;</div>
+              <div class="deadline-content">
+                <h3 class="deadline-title">US Senate AI Safety Hearing</h3>
+                <time class="deadline-date" datetime="2026-03-22">March 22, 2026</time>
+                <span class="deadline-countdown">21 days away</span>
+              </div>
+              <div class="deadline-actions">
+                <button class="btn btn--icon" aria-label="Add to calendar" data-action="calendar-export" data-deadline-id="dl-002" title="Export to calendar">&#x1F4C5;</button>
+              </div>
+            </li>
+            <li class="deadline-item deadline-item--soon" role="listitem">
+              <div class="deadline-accent" aria-hidden="true"></div>
+              <div class="deadline-icon" aria-hidden="true">&#x1F5E3;&#xFE0F;</div>
+              <div class="deadline-content">
+                <h3 class="deadline-title">UK AI Standards Public Feedback Closes</h3>
+                <time class="deadline-date" datetime="2026-03-30">March 30, 2026</time>
+                <span class="deadline-countdown">29 days away</span>
+              </div>
+              <div class="deadline-actions">
+                <button class="btn btn--icon" aria-label="Add to calendar" data-action="calendar-export" data-deadline-id="dl-003" title="Export to calendar">&#x1F4C5;</button>
+              </div>
+            </li>
+            <li class="deadline-item deadline-item--track" role="listitem">
+              <div class="deadline-accent" aria-hidden="true"></div>
+              <div class="deadline-icon" aria-hidden="true">&#x1F4CB;</div>
+              <div class="deadline-content">
+                <h3 class="deadline-title">NIST AI Risk Management Framework v2 Published</h3>
+                <time class="deadline-date" datetime="2026-04-15">April 15, 2026</time>
+                <span class="deadline-countdown">45 days away</span>
+              </div>
+              <div class="deadline-actions">
+                <button class="btn btn--icon" aria-label="Add to calendar" data-action="calendar-export" data-deadline-id="dl-004" title="Export to calendar">&#x1F4C5;</button>
+              </div>
+            </li>
+            <li class="deadline-item deadline-item--future" role="listitem">
+              <div class="deadline-accent" aria-hidden="true"></div>
+              <div class="deadline-icon" aria-hidden="true">&#x1F4CA;</div>
+              <div class="deadline-content">
+                <h3 class="deadline-title">EU AI Act High-Risk Registration Opens</h3>
+                <time class="deadline-date" datetime="2026-05-01">May 1, 2026</time>
+                <span class="deadline-countdown">61 days away</span>
+              </div>
+              <div class="deadline-actions">
+                <button class="btn btn--icon" aria-label="Add to calendar" data-action="calendar-export" data-deadline-id="dl-005" title="Export to calendar">&#x1F4C5;</button>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+    </div><!-- /.dashboard-grid -->
+  </main>
+
+  <!-- Event Detail Modal -->
+  <div class="modal-overlay" id="event-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="modal-severity-badge">Critical</span>
+        <h2 class="modal-title" id="modal-title">Event Title</h2>
+        <button class="modal-close" aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-meta">
+          <span class="modal-jurisdiction"></span>
+          <time class="modal-date"></time>
+        </div>
+        <p class="modal-description"></p>
+        <div class="modal-impact">
+          <h3>Impact Assessment</h3>
+          <p class="modal-impact-text"></p>
+        </div>
+        <div class="modal-sources">
+          <h3>Sources</h3>
+          <ul class="modal-sources-list"></ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn--secondary modal-close-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-container" aria-live="polite" aria-atomic="true">
+    <div class="toast" hidden>
+      <span class="toast-message"></span>
+    </div>
+  </div>
+
+  <script src="../src/scripts/dashboard.js"></script>
+</body>
+</html>
