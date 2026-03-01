@@ -3,6 +3,8 @@ layout: default
 title: Governance Dashboard
 ---
 
+{% assign default_period = site.data.dashboard.sentiment | first %}
+
 <main class="site-content wide">
   <div class="dashboard-header">
     <h1>Governance Dashboard</h1>
@@ -17,28 +19,24 @@ title: Governance Dashboard
       <div class="dash-card-title">Regulatory Sentiment</div>
       <div class="gauge-container">
         <svg class="gauge-svg" viewBox="0 0 200 120">
-          <!-- Gauge background arc -->
           <path class="gauge-bg" d="M 20 100 A 80 80 0 0 1 180 100" />
-          <!-- Gauge fill arc -->
           <path class="gauge-fill" id="gauge-fill" d="M 20 100 A 80 80 0 0 1 180 100" />
-          <!-- Needle -->
           <polygon class="gauge-needle" id="gauge-needle" points="97,100 103,100 100,30" />
-          <!-- Center dot -->
           <circle cx="100" cy="100" r="6" fill="var(--color-bg-primary)" stroke="var(--color-text-primary)" stroke-width="2" />
         </svg>
-        <div class="gauge-score" id="gauge-score">{{ site.data.dashboard.sentiment.periods["7"].score }}</div>
-        <div class="gauge-label" id="gauge-label">{{ site.data.dashboard.sentiment.periods["7"].label }}</div>
-        <div class="gauge-trend" id="gauge-trend">{{ site.data.dashboard.sentiment.periods["7"].trend }}</div>
-        <div class="gauge-detail" id="gauge-detail">{{ site.data.dashboard.sentiment.periods["7"].detail }}</div>
+        <div class="gauge-score" id="gauge-score">{{ default_period.score }}</div>
+        <div class="gauge-label" id="gauge-label">{{ default_period.label }}</div>
+        <div class="gauge-trend" id="gauge-trend">{{ default_period.trend }}</div>
+        <div class="gauge-detail" id="gauge-detail">{{ default_period.detail }}</div>
       </div>
       <div class="period-toggles">
-        {% for period in site.data.dashboard.sentiment.periods %}
-        <button class="period-btn{% if period[0] == '7' %} active{% endif %}"
-                data-period="{{ period[0] }}"
-                data-score="{{ period[1].score }}"
-                data-label="{{ period[1].label }}"
-                data-trend="{{ period[1].trend }}"
-                data-detail="{{ period[1].detail }}">{{ period[0] }}d</button>
+        {% for period in site.data.dashboard.sentiment %}
+        <button class="period-btn{% if forloop.first %} active{% endif %}"
+                data-period="{{ period.days }}"
+                data-score="{{ period.score }}"
+                data-label="{{ period.label }}"
+                data-trend="{{ period.trend }}"
+                data-detail="{{ period.detail }}">{{ period.days }}d</button>
         {% endfor %}
       </div>
     </div>
@@ -76,7 +74,7 @@ title: Governance Dashboard
         {% for risk in site.data.dashboard.risks %}
         <div class="risk-item">
           <div class="risk-header">
-            <span class="risk-jurisdiction">{{ risk.flag }} {{ risk.jurisdiction }}</span>
+            <span class="risk-jurisdiction">{{ risk.jurisdiction }}</span>
             <span class="risk-score level-{{ risk.level }}">{{ risk.score }}/100</span>
           </div>
           <div class="risk-bar">
