@@ -1,27 +1,31 @@
 {
-  "lastUpdated": "2026-03-01",
+  "lastUpdated": "2026-03-02",
   "sentiment": [
-    { "days": 7, "score": 38, "label": "Cautious", "trend": "Shifted tighter this week", "detail": "EU prohibited-practices enforcement active, US state bills advancing" },
-    { "days": 30, "score": 45, "label": "Mixed", "trend": "Shifted tighter this month", "detail": "EU enforcement balanced by US federal deregulation signals" },
-    { "days": 90, "score": 52, "label": "Balanced", "trend": "Slight tightening over 90 days", "detail": "Global divergence: EU tightening, US deregulating, Asia stabilizing" }
+    { "days": 7, "score": 28, "label": "Restrictive", "trend": "Shifted tighter - escalation", "detail": "Trump blocks Anthropic, White House pressures states on child safety, 90-day EO deadline looms" },
+    { "days": 30, "score": 38, "label": "Cautious", "trend": "Shifted tighter this month", "detail": "Federal enforcement actions vs. state resistance; litigation expected" },
+    { "days": 90, "score": 45, "label": "Mixed", "trend": "Rapid tightening in past 2 weeks", "detail": "EU enforcement active; US federal-state conflict intensifying" }
   ],
   "risks": [
-    { "jurisdiction": "EU", "flag": "EU", "score": 78, "level": "high", "factors": "AI Act prohibited practices in effect, high-risk obligations Aug 2026, penalties up to 7% turnover" },
+    { "jurisdiction": "US-Federal-State", "flag": "US", "score": 88, "level": "critical", "factors": "Federal preemption EO vs. bipartisan state resistance; DOJ litigation task force active; Anthropic supply-chain designation precedent; March 11 deadline for Commerce evaluation" },
+    { "jurisdiction": "EU", "flag": "EU", "score": 78, "level": "high", "factors": "AI Act prohibited practices enforced Feb 2, 2025; high-risk obligations Aug 2, 2026; penalties 7% turnover" },
     { "jurisdiction": "China", "flag": "CN", "score": 72, "level": "high", "factors": "Generative AI regulations, algorithm registration, content alignment requirements" },
-    { "jurisdiction": "UK", "flag": "GB", "score": 55, "level": "medium", "factors": "ICO guidance, sector-specific rules via existing regulators, pro-innovation approach" },
-    { "jurisdiction": "US", "flag": "US", "score": 42, "level": "medium", "factors": "State patchwork (CO, NY, MA), federal deregulation under EO 14179, FTC enforcement" }
+    { "jurisdiction": "UK", "flag": "GB", "score": 55, "level": "medium", "factors": "ICO guidance, sector-specific rules via existing regulators, pro-innovation approach" }
   ],
   "events": [
-    { "title": "EU AI Act Prohibited Practices Now Enforceable", "summary": "Article 5 provisions banning social scoring, untargeted facial recognition scraping, and emotion inference in workplaces/schools have been enforceable since Feb 2, 2025.", "severity": "critical", "jurisdiction": "EU", "date": "2025-02-02" },
-    { "title": "Colorado SB 24-205 Implementation Approaches", "summary": "First comprehensive state AI bias law (signed May 2024) nears its June 30, 2026 implementation deadline after delay by SB 25B-004.", "severity": "important", "jurisdiction": "US", "date": "2026-02-20" },
-    { "title": "Trump Administration Signals State Preemption", "summary": "December 2025 executive order created DOJ AI Litigation Task Force to challenge state AI laws in federal court.", "severity": "critical", "jurisdiction": "US", "date": "2025-12-01" },
-    { "title": "New York RAISE Act Introduced", "summary": "NY Senate Bill S2632 proposes regulating frontier AI models, joining multiple AI employment bills in the state legislature.", "severity": "important", "jurisdiction": "US", "date": "2026-02-19" },
-    { "title": "Massachusetts AI Disclosure Act", "summary": "H.81 and related bills advancing in the legislature, addressing AI transparency in healthcare and consumer targeting.", "severity": "watch", "jurisdiction": "US", "date": "2026-02-21" }
+    { "title": "Trump Orders Federal Agencies to Stop Using Anthropic", "summary": "Trump directed all federal agencies to cease using Anthropic over Pentagon dispute regarding weapons and surveillance guardrails. 6-month phase-out ordered Feb 27. Pentagon designated Anthropic a supply-chain risk. Unprecedented use of federal procurement as enforcement mechanism.", "severity": "critical", "jurisdiction": "US", "date": "2026-02-27" },
+    { "title": "White House Pressures States on Child Safety AI Bills", "summary": "White House contacted Florida Speaker Daniel Perez to block DeSantis AI Bill of Rights; previously sent letter opposing Utah HB 286. Reports of plans to pressure Tennessee, Nebraska. Administration opposes bills protecting minors from AI-generated explicit images.", "severity": "critical", "jurisdiction": "US", "date": "2026-02-24" },
+    { "title": "FTC Policy Statement and Disclosure Standard Deadlines Set", "summary": "FTC directed to issue AI policy statement by March 11, 2026 on state law preemption. David Sacks ordered to explore federal AI model disclosure standard by March 16. Expected to frame preemption arguments for DOJ lawsuits.", "severity": "important", "jurisdiction": "US", "date": "2026-03-02" },
+    { "title": "States Continue Introducing AI Bills Despite Federal Threats", "summary": "New bills introduced in Georgia (2), Louisiana (2), Minnesota, Rhode Island as of March 2. Connecticut advancing algorithmic pricing amendments. Bipartisan state-level activity continues unabated.", "severity": "important", "jurisdiction": "US", "date": "2026-03-02" },
+    { "title": "California Launches First State AI Enforcement Unit", "summary": "California Attorney General Rob Bonta formally launched dedicated AI oversight and accountability program on Feb 17. Actively investigating xAI for non-consensual explicit images.", "severity": "important", "jurisdiction": "US", "date": "2026-02-17" },
+    { "title": "Republican Governor Publicly Opposes Federal Preemption", "summary": "Utah Governor Spencer Cox called Trump administration preemption efforts 'preposterous' on Feb 23, joining CO, CA, TX in bipartisan state resistance.", "severity": "important", "jurisdiction": "US", "date": "2026-02-23" }
   ],
   "deadlines": [
-    { "title": "Colorado SB 24-205 Implementation", "date": "2026-06-30", "jurisdiction": "US", "description": "Consumer Protections for AI Act takes effect (delayed from Feb 2026 by SB 25B-004)" },
+    { "title": "Connecticut AI Algorithmic Pricing Amendment Hearing", "date": "2026-03-04", "jurisdiction": "US", "description": "Hearing on facial recognition, algorithmic pricing, employment profiling, and precise geolocation amendments to CTDPA." },
+    { "title": "FTC AI Policy Statement Due", "date": "2026-03-11", "jurisdiction": "US", "description": "FTC to issue policy statement describing how FTC Act applies to AI and when state laws are preempted by federal deceptive practices rules." },
+    { "title": "Trump EO 90-Day State AI Evaluation Deadline", "date": "2026-03-11", "jurisdiction": "US", "description": "Commerce Department must publish evaluation of 'onerous' state AI laws. Expected to trigger DOJ lawsuit targets and BEAD funding withholding decisions." },
+    { "title": "Federal AI Model Disclosure Standard Due", "date": "2026-03-16", "jurisdiction": "US", "description": "David Sacks directed to explore federal reporting or disclosure standard for AI models that would preempt state requirements." },
+    { "title": "Colorado SB 24-205 Implementation", "date": "2026-06-30", "jurisdiction": "US", "description": "Consumer Protections for AI Act takes effect (delayed from Feb 1 by SB 25B-004). Likely DOJ preemption challenge." },
     { "title": "EU AI Act High-Risk Obligations", "date": "2026-08-02", "jurisdiction": "EU", "description": "Full compliance required for high-risk AI systems under Annex III" },
-    { "title": "EU AI Act General-Purpose AI Obligations", "date": "2025-08-02", "jurisdiction": "EU", "description": "Obligations for general-purpose AI models took effect Aug 2, 2025" },
     { "title": "EU AI Act Full Application", "date": "2027-08-02", "jurisdiction": "EU", "description": "Remaining AI Act provisions apply, including high-risk systems in Annex I" }
   ]
 }
